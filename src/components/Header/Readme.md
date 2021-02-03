@@ -5,6 +5,10 @@ const Example = withPlatform(({ platform }) => {
       <Panel id="header">
         <PanelHeader>Header</PanelHeader>
         <Group>
+          <Header mode="primary" aside={<Icon16Cancel />}>Длинный b yelysq pfujkjdjr tot [e;t</Header>
+          <Header mode="primary" aside={<Icon24Cancel />}>Длинный b yelysq pfujkjdjr tot [e;t</Header>
+          <Header mode="primary" aside={<><Icon24Cancel /><Icon24Done /></>}>Длинный b yelysq pfujkjdjr tot [e;t</Header>
+          <Header mode="primary" aside={<Icon28Delete />}>Длинный b yelysq pfujkjdjr tot [e;t</Header>
           <Header mode="primary" aside={<Link>Показать все{platform === VKCOM && <Icon12ChevronOutline />}</Link>}>Плейлисты</Header>
           <Header mode="primary" aside={<Link>Показать все{platform === VKCOM && <Icon12ChevronOutline />}</Link>} subtitle="SOHN — Conrad">Плейлисты</Header>
           <Header mode="primary" aside={<Link>Показать все{platform === VKCOM && <Icon12ChevronOutline />}</Link>} indicator="12">Плейлисты</Header>
@@ -19,8 +23,8 @@ const Example = withPlatform(({ platform }) => {
           <Header mode="tertiary">Важные</Header>
         </Group>
       </Panel>
-    </View>  
-  )   
+    </View>
+  )
 });
 
 <Example />
