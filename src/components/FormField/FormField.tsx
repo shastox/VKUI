@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { AllHTMLAttributes, ElementType, useState } from 'react';
 import getClassName from '../../helpers/getClassName';
 import classNames from '../../lib/classNames';

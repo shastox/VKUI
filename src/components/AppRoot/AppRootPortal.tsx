@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FC, PropsWithChildren, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import { AppRootContext } from './AppRootContext';

@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FunctionComponent } from 'react';
 import { Icon28ChevronBack, Icon28ChevronLeftOutline, Icon28ArrowLeftOutline } from '@vkontakte/icons';
 import PanelHeaderButton, { PanelHeaderButtonProps } from '../PanelHeaderButton/PanelHeaderButton';

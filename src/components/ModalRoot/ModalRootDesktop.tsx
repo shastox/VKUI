@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { Component, ReactElement } from 'react';
 import classNames from '../../lib/classNames';
 import { isFunction } from '../../lib/utils';

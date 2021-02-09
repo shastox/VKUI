@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { PureComponent, RefObject } from 'react';
 import Touch, { TouchProps, TouchEvent } from '../Touch/Touch';
 import TouchRootContext from '../Touch/TouchContext';

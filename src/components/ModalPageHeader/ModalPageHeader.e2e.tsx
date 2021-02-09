@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React from 'react';
 import ModalPageHeader from './ModalPageHeader';
 import { describeScreenshotFuzz } from '../../testing/e2e/utils';

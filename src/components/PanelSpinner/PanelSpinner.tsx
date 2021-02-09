@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FunctionComponent } from 'react';
 import Spinner, { SpinnerProps } from '../Spinner/Spinner';
 

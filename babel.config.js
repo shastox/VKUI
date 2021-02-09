@@ -13,11 +13,8 @@ const testFiles = [
 module.exports = {
   presets: [
     ['@babel/preset-env', { modules: useModules ? false : 'commonjs' }],
-    ['@babel/preset-react', {
-      "pragma": "window.createScopedElement",
-      "pragmaFrag": "React.Fragment",
-    }],
-    '@babel/preset-typescript'
+    ['@babel/preset-react', { "pragma": "createScopedElement", "pragmaFrag": "createScopedElement.Fragment" }],
+    ['@babel/preset-typescript', { jsxPragma: "createScopedElement", jsxPragmaFrag: 'createScopedElement.Fragment' }]
   ],
   plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-proposal-object-rest-spread', '@babel/plugin-transform-runtime'],
   ignore: ['./src/vkui.js'].concat(isProduction ? testFiles : []),

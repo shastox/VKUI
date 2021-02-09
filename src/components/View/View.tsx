@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { Component, CSSProperties, HTMLAttributes, ReactNode, ReactElement } from 'react';
 import classNames from '../../lib/classNames';
 import { transitionEvent, animationEvent } from '../../lib/supportEvents';

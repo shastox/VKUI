@@ -1,6 +1,7 @@
 import '../src/styles/styles.css';
 import '../src/styles/unstable.css';
 
+import createScopedElement from '../src/createScopedElement';
 import pkg from '../package';
 import * as VKUI from '../src';
 import * as VKUIUnstable from '../src/unstable';
@@ -43,3 +44,5 @@ window.getRandomUser = getRandomUser;
 window.getRandomUsers = getRandomUsers;
 window.importantCountries = importantCountries;
 window.getAvatarUrl = getAvatarUrl;
+console.log(createScopedElement);
+window.createScopedElement = createScopedElement;

@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { Component, HTMLAttributes, RefObject } from 'react';
 import FixedLayout from '../FixedLayout/FixedLayout';
 import classNames from '../../lib/classNames';

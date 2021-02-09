@@ -1,12 +1,16 @@
 import React from 'react';
 
-(window as any).createScopedElement = ((...args: any[]) => {
-  const props = args[1];
-  if (props && props.className) {
+const hasTransformable = /\b[A-Z]/g;
+const createScopedElement = (el: any, ...args: any[]) => {
+  const props = args[0];
+  if (typeof el === 'string' && props && props.className && props.className.match(hasTransformable)) {
     props.className = (props.className as string)
       .split(/\s+/g)
-      .map((cn) => cn.match(/^[A-Z]/) ? `vkui__vkui__${cn}` : cn)
+      .map((cn) => cn.match(hasTransformable) ? `vkui__vkui__${cn}` : cn)
       .join(' ');
   }
-  return (React.createElement as any)(...args);
-}) as typeof React.createElement;
+  return React.createElement(el, ...args);
+};
+createScopedElement.Fragment = React.Fragment;
+
+export default createScopedElement;

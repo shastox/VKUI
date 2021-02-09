@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React from 'react';
 import { baselineComponent } from '../../testing/utils';
 import ContentCard from './ContentCard';

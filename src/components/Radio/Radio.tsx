@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FunctionComponent, InputHTMLAttributes, ReactNode } from 'react';
 import Tappable, { ACTIVE_EFFECT_DELAY } from '../Tappable/Tappable';
 import getClassName from '../../helpers/getClassName';

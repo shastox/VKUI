@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { useContext } from 'react';
 import { PanelContext } from './PanelContext';
 

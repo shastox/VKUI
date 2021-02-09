@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FunctionComponent } from 'react';
 import NativeSelect from '../NativeSelect/NativeSelect';
 import CustomSelect, { CustomSelectProps } from '../CustomSelect/CustomSelect';

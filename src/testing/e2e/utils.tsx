@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { ComponentType, Fragment, isValidElement } from 'react';
 import { MatchImageSnapshotOptions } from 'jest-image-snapshot';
 import { screenshot } from '@react-playwright';

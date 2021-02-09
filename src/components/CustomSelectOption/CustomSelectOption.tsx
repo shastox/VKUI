@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FC, HTMLAttributes, ReactNode } from 'react';
 import { Icon16Done } from '@vkontakte/icons';
 import classNames from '../../lib/classNames';

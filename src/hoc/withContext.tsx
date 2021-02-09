@@ -1,3 +1,4 @@
+import createScopedElement from '../createScopedElement';
 import React, { Context } from 'react';
 
 export default function withContext<T, X>(Component: T, Ctx: Context<X>, prop: string): T {

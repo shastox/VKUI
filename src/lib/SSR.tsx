@@ -1,3 +1,4 @@
+import createScopedElement from '../createScopedElement';
 import React, { createContext, FC } from 'react';
 import { PlatformType, platform } from './platform';
 import { BrowserInfo, computeBrowserInfo } from './browser';

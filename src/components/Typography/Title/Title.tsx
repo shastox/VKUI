@@ -1,3 +1,4 @@
+import createScopedElement from '../../../createScopedElement';
 import React, { ElementType, FunctionComponent, AllHTMLAttributes } from 'react';
 import usePlatform from '../../../hooks/usePlatform';
 import classNames from '../../../lib/classNames';

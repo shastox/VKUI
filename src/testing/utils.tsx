@@ -1,4 +1,5 @@
 import { render, RenderResult, screen } from '@testing-library/react';
+import createScopedElement from '../createScopedElement';
 import React, { ComponentType } from 'react';
 
 export type ComponentTestOptions = {

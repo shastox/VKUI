@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FunctionComponent, ButtonHTMLAttributes, useState } from 'react';
 import Tappable from '../Tappable/Tappable';
 import getClassName from '../../helpers/getClassName';

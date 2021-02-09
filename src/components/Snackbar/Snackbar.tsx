@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { HTMLAttributes, MouseEvent, PureComponent } from 'react';
 import withPlatform from '../../hoc/withPlatform';
 import Touch, { TouchEvent } from '../Touch/Touch';

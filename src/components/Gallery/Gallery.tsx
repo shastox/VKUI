@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { Children, Component, HTMLAttributes, ReactElement, RefCallback, useCallback, useEffect, useState, FC } from 'react';
 import getClassName from '../../helpers/getClassName';
 import Touch, { TouchEventHandler, TouchEvent } from '../Touch/Touch';

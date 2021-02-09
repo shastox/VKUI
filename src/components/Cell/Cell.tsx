@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { MouseEvent, FC, useState, useRef, useEffect } from 'react';
 import classNames from '../../lib/classNames';
 import getClassName from '../../helpers/getClassName';

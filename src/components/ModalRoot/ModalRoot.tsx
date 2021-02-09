@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { Component, ReactElement, SyntheticEvent } from 'react';
 import Touch, { TouchEvent } from '../Touch/Touch';
 import TouchRootContext from '../Touch/TouchContext';

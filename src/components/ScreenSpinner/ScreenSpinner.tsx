@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import Spinner, { SpinnerProps } from '../Spinner/Spinner';
 import PopoutWrapper from '../PopoutWrapper/PopoutWrapper';

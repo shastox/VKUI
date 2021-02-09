@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { ChangeEvent, ChangeEventHandler, PureComponent, TextareaHTMLAttributes, RefCallback } from 'react';
 import classNames from '../../lib/classNames';
 import FormField from '../FormField/FormField';

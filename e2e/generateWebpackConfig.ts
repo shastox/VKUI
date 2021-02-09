@@ -24,6 +24,7 @@ export async function generateWebpackConfig() {
       alias: {
         ...resolve.alias,
         '@react-playwright': path.resolve(__dirname, 'browser/mount.ts'),
+        '@createScopedElement': path.resolve(__dirname, 'src/createScopedElement.tsx'),
       },
     },
     devServer: {

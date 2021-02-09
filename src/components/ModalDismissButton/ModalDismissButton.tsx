@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { HTMLAttributes, FC } from 'react';
 import { Icon20Cancel } from '@vkontakte/icons';
 import Tappable from '../Tappable/Tappable';

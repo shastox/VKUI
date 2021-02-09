@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { ReactElement, ReactNode, Component, Fragment, RefCallback, isValidElement } from 'react';
 import classNames from '../../lib/classNames';
 import getClassName from '../../helpers/getClassName';

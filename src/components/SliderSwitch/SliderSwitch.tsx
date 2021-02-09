@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { HTMLAttributes, KeyboardEvent, RefObject, createRef } from 'react';
 import SliderSwitchButton from './SliderSwitchButton';
 import classNames from '../../lib/classNames';

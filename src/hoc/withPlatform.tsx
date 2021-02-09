@@ -1,3 +1,4 @@
+import createScopedElement from '../createScopedElement';
 import React from 'react';
 import { SSRContext } from '../lib/SSR';
 import { ConfigProviderContext } from '../components/ConfigProvider/ConfigProviderContext';

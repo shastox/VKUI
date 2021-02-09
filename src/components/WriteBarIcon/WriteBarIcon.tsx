@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import {
   Icon24Send,

@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { Component, createRef, HTMLAttributes } from 'react';
 import classNames from '../../lib/classNames';
 

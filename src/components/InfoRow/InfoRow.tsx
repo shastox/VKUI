@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react';
 import Subhead from '../Typography/Subhead/Subhead';
 import getClassName from '../../helpers/getClassName';

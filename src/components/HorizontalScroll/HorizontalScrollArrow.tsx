@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FC } from 'react';
 import { Icon24Chevron } from '@vkontakte/icons';
 

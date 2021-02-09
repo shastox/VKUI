@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React from 'react';
 import Button, { ButtonProps } from './Button';
 import { describeScreenshotFuzz } from '../../testing/e2e/utils';

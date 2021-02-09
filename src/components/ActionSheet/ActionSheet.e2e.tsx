@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React from 'react';
 import ActionSheet, { ActionSheetProps } from './ActionSheet';
 import ActionSheetItem from '../ActionSheetItem/ActionSheetItem';

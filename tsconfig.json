@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react",
+    "jsxFactory": "createScopedElement",
     "target": "esnext",
     "lib": ["es6", "dom"],
     "outDir": "dist",

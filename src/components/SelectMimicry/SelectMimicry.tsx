@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from '../../lib/classNames';
 import { Icon24Dropdown, Icon20Dropdown } from '@vkontakte/icons';
@@ -68,4 +69,3 @@ export default withAdaptivity(SelectMimicry, {
   sizeX: true,
   sizeY: true,
 });
-

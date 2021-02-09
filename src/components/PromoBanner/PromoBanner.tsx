@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { HTMLAttributes, useEffect, useMemo, useState, useCallback } from 'react';
 import { Icon24Dismiss } from '@vkontakte/icons';
 import Button from '../Button/Button';

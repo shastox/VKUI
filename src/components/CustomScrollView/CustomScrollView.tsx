@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { createRef } from 'react';
 
 interface Props {

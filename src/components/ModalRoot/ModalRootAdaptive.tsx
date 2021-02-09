@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { FC } from 'react';
 import withAdaptivity, { AdaptivityProps, ViewHeight, ViewWidth } from '../../hoc/withAdaptivity';
 import { ModalRootTouch } from './ModalRoot';

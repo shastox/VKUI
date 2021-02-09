@@ -257,6 +257,9 @@ module.exports = {
         ]
       }]
     },
+    optimization: {
+      usedExports: false
+    },
     plugins: [
       new MiniCssExtractPlugin({
         filename: '[name].css',

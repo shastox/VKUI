@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React, { ReactNode } from 'react';
 import { canUseDOM, withDOM, DOMProps } from '../../lib/dom';
 import {

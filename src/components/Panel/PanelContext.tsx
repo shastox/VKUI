@@ -1,3 +1,4 @@
+import createScopedElement from '../../createScopedElement';
 import React from 'react';
 
 export interface PanelContextProps {
