@@ -1,4 +1,5 @@
 import './lib/polyfills';
+import './createScopedElement';
 
 export { default as AppRoot } from './components/AppRoot/AppRoot';
 /**

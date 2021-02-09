@@ -1,12 +1,14 @@
 const cssCustomProperties = require('postcss-custom-properties');
 const cssImport = require('postcss-import');
 const autoprefixer = require('autoprefixer');
+const selectorPrefixer = require('postcss-prefixer');
 const csso = require('postcss-csso');
 
 let plugins = [
   cssImport(),
   cssCustomProperties({ preserve: true }),
   autoprefixer(),
+  selectorPrefixer({ prefix: 'vkui__' })
 ];
 
 if (process.env.NODE_ENV === 'production') {

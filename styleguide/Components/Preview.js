@@ -50,6 +50,7 @@ class PrepareFrame extends React.Component {
   }
 
   render () {
+    this.context.window.createScopedElement = window.createScopedElement;
     return this.state.loaded ? this.props.children({ window: this.context.window }) : null
   }
 }

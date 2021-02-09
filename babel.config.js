@@ -13,7 +13,10 @@ const testFiles = [
 module.exports = {
   presets: [
     ['@babel/preset-env', { modules: useModules ? false : 'commonjs' }],
-    '@babel/preset-react',
+    ['@babel/preset-react', {
+      "pragma": "window.createScopedElement",
+      "pragmaFrag": "React.Fragment",
+    }],
     '@babel/preset-typescript'
   ],
   plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-proposal-object-rest-spread', '@babel/plugin-transform-runtime'],
