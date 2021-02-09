@@ -37,7 +37,7 @@ const PanelHeaderInTypography: FC<PanelHeaderProps> = ({ children }: PanelHeader
 
   return platform === VKCOM
     ? <Text Component="span" weight="medium">{children}</Text>
-    : <span className="PanelHeader__content-in">{children}</span>;
+    : <span css="PanelHeader__content-in">{children}</span>;
 };
 
 const PanelHeaderIn: FC<PanelHeaderProps> = ({ children, left, right }) => {
@@ -45,14 +45,14 @@ const PanelHeaderIn: FC<PanelHeaderProps> = ({ children, left, right }) => {
   const isPrimitive = isPrimitiveReactNode(children);
 
   return (
-    <div className="PanelHeader__in">
-      <div className="PanelHeader__left">
+    <div css="PanelHeader__in">
+      <div css="PanelHeader__left">
         {left}
       </div>
-      <div className="PanelHeader__content">
+      <div css="PanelHeader__content">
         {isPrimitive ? <PanelHeaderInTypography>{children}</PanelHeaderInTypography> : children}
       </div>
-      <div className="PanelHeader__right">
+      <div css="PanelHeader__right">
         {webviewType !== WebviewType.VKAPPS && right}
       </div>
     </div>
@@ -84,7 +84,7 @@ const PanelHeader: FC<PanelHeaderProps> = (props) => {
   return (
     <div
       {...restProps}
-      className={
+      css={
         classNames(
           getClassname('PanelHeader', platform),
           {
@@ -104,13 +104,13 @@ const PanelHeader: FC<PanelHeaderProps> = (props) => {
       ref={isFixed ? getRootRef : getRef}
     >
       {isFixed ?
-        <FixedLayout className="PanelHeader__fixed" vertical="top" getRootRef={getRef}>
+        <FixedLayout css="PanelHeader__fixed" vertical="top" getRootRef={getRef}>
           <PanelHeaderIn {...props} />
         </FixedLayout> :
         <PanelHeaderIn {...props} />
       }
       {separator && visor && platform !== VKCOM && <Separator
-        className="PanelHeader__separator"
+        css="PanelHeader__separator"
         expanded={sizeX === SizeType.REGULAR}
       />}
     </div>

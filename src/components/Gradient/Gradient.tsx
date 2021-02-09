@@ -11,7 +11,7 @@ const Gradient: FunctionComponent<GradientProps> = ({ mode, children, className,
   return (
     <div
       {...restProps}
-      className={classNames('Gradient', `Gradient--md-${mode}`, `Gradient--to-${to}`, className)}
+      css={classNames('Gradient', `Gradient--md-${mode}`, `Gradient--to-${to}`, className)}
     >
       {children}
     </div>

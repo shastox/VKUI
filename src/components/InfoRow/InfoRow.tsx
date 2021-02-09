@@ -16,9 +16,9 @@ const InfoRow: FunctionComponent<InfoRowProps> = ({ header, className, children,
   const baseClassName = getClassName('InfoRow', platform);
 
   return (
-    <Headline {...restProps} weight="regular" className={classNames(baseClassName, className)}>
+    <Headline {...restProps} weight="regular" css={classNames(baseClassName, className)}>
       {hasReactNode(header) &&
-        <Subhead Component="div" className="InfoRow__header" weight="regular">{header}</Subhead>
+        <Subhead Component="div" css="InfoRow__header" weight="regular">{header}</Subhead>
       }
       {children}
     </Headline>

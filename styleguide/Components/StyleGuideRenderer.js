@@ -131,19 +131,19 @@ function StyleGuideRenderer({ classes, title, homepageUrl, children, toc, hasSid
 
   return (
     <StyleGuideContext.Provider value={providerValue}>
-    <div className={cx(classes.root, hasSidebar && classes.hasSidebar)}>
-      <main className={classes.content} style={{ maxWidth: hasSidebar ? 1200 : '100%' }}>
+    <div css={cx(classes.root, hasSidebar && classes.hasSidebar)}>
+      <main css={classes.content} style={{ maxWidth: hasSidebar ? 1200 : '100%' }}>
         {children}
-        <footer className={classes.footer}>
+        <footer css={classes.footer}>
           <Markdown text={`Generated with [React Styleguidist](${homepageUrl})`} />
         </footer>
       </main>
       {hasSidebar && (
-        <div className={classes.sidebar}>
-          <div className={classes.logo}>
+        <div css={classes.sidebar}>
+          <div css={classes.logo}>
             <Logo>{title}</Logo>
           </div>
-          <div className={classes.os}>
+          <div css={classes.os}>
             <IntegrationSelect onChange={ (e) => setContext({ integration: e.target.value })} value={state.integration} />
             <div style={{ marginTop: 4 }}>
               <PlatformSelect onChange={ (e) => setContext({ platform: e.target.value })} value={platform} />

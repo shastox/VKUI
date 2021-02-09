@@ -17,7 +17,7 @@ const PanelHeaderBack: FunctionComponent<PanelHeaderButtonProps & AdaptivityProp
   });
 
   return (
-    <PanelHeaderButton {...props} className={className} label={showLabel && label}>
+    <PanelHeaderButton {...props} css={className} label={showLabel && label}>
       {platform === ANDROID ? <Icon28ArrowLeftOutline /> : platform === VKCOM ? <Icon28ChevronLeftOutline /> : <Icon28ChevronBack />}
     </PanelHeaderButton>
   );

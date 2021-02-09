@@ -66,22 +66,22 @@ export const MiniInfoCell: FC<MiniInfoCellProps> = (props) => {
   return (
     <Component
       {...restProps}
-      className={classNames(getClassName('MiniInfoCell', platform), {
+      css={classNames(getClassName('MiniInfoCell', platform), {
         [`MiniInfoCell--md-${mode}`]: mode !== 'base',
         [`MiniInfoCell--wr-${textWrap}`]: textWrap !== 'nowrap',
       }, `MiniInfoCell--lvl-${textLevel}`, className)}
     >
-      <div className="MiniInfoCell__icon">
+      <div css="MiniInfoCell__icon">
         {before}
       </div>
       <Text
-        className="MiniInfoCell__content"
+        css="MiniInfoCell__content"
         weight={mode === 'more' ? 'medium' : 'regular'}
       >
         {children}
       </Text>
       {hasReactNode(after) &&
-      <div className="MiniInfoCell__after">
+      <div css="MiniInfoCell__after">
         {after}
       </div>
       }

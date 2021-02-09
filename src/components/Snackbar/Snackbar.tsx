@@ -220,36 +220,36 @@ class Snackbar extends PureComponent<SnackbarProps, SnackbarState> {
       <AppRootPortal>
         <div
           {...restProps}
-          className={classNames(getClassname('Snackbar', platform), className, `Snackbar--l-${resolvedLayout}`, {
+          css={classNames(getClassname('Snackbar', platform), className, `Snackbar--l-${resolvedLayout}`, {
             'Snackbar--closing': this.state.closing,
             'Snackbar--touched': this.state.touched,
             'Snackbar--desktop': this.isDesktop,
           })}
         >
           <Touch
-            className="Snackbar__in"
+            css="Snackbar__in"
             getRootRef={this.getInnerRef}
             onStart={this.onTouchStart}
             onMoveX={this.onTouchMoveX}
             onEnd={this.onTouchEnd}
           >
-            <div className="Snackbar__body" ref={this.bodyElRef}>
+            <div css="Snackbar__body" ref={this.bodyElRef}>
               {before &&
-              <div className="Snackbar__before">
+              <div css="Snackbar__before">
                 {before}
               </div>}
 
-              <div className="Snackbar__content">
-                <Text weight="regular" className="Snackbar__content-text">{children}</Text>
+              <div css="Snackbar__content">
+                <Text weight="regular" css="Snackbar__content-text">{children}</Text>
 
                 {action &&
-                <Button align="left" hasHover={false} mode="tertiary" size="s" className="Snackbar__action" onClick={this.onActionClick}>
+                <Button align="left" hasHover={false} mode="tertiary" size="s" css="Snackbar__action" onClick={this.onActionClick}>
                   {action}
                 </Button>}
               </div>
 
               {after &&
-              <div className="Snackbar__after">
+              <div css="Snackbar__after">
                 {after}
               </div>}
             </div>

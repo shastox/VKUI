@@ -41,15 +41,15 @@ const Placeholder: FC<PlaceholderProps> = (props: PlaceholderProps) => {
     <div
       {...restProps}
       ref={getRootRef}
-      className={classNames('Placeholder', {
+      css={classNames('Placeholder', {
         'Placeholder--stretched': stretched,
       }, className)}
     >
-      <div className="Placeholder__in">
-        {hasReactNode(icon) && <div className="Placeholder__icon">{icon}</div>}
-        {hasReactNode(header) && <Title level="2" weight="medium" className="Placeholder__header">{header}</Title>}
-        {hasReactNode(children) && <Headline weight="regular" className="Placeholder__text">{children}</Headline>}
-        {hasReactNode(action) && <div className="Placeholder__action">{action}</div>}
+      <div css="Placeholder__in">
+        {hasReactNode(icon) && <div css="Placeholder__icon">{icon}</div>}
+        {hasReactNode(header) && <Title level="2" weight="medium" css="Placeholder__header">{header}</Title>}
+        {hasReactNode(children) && <Headline weight="regular" css="Placeholder__text">{children}</Headline>}
+        {hasReactNode(action) && <div css="Placeholder__action">{action}</div>}
       </div>
     </div>
   );

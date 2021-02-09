@@ -70,7 +70,7 @@ const RichCell: FunctionComponent<RichCellProps> = ({
   return (
     <RootComponent
       {...props}
-      className={
+      css={
         classNames(
           className,
           getClassName('RichCell', platform),
@@ -82,20 +82,20 @@ const RichCell: FunctionComponent<RichCellProps> = ({
       }
     >
       {before}
-      <div className="RichCell__in">
-        <div className="RichCell__top">
+      <div css="RichCell__in">
+        <div css="RichCell__top">
           {/* Этот after будет скрыт из верстки. Он нужен для CSS */}
           {after}
-          <Text weight="medium" className="RichCell__content">
-            <div className="RichCell__children">{children}</div>
-            {hasReactNode(after) && <div className="RichCell__after">{after}</div>}
+          <Text weight="medium" css="RichCell__content">
+            <div css="RichCell__children">{children}</div>
+            {hasReactNode(after) && <div css="RichCell__after">{after}</div>}
           </Text>
-          {hasReactNode(text) && <Text weight="regular" className="RichCell__text">{text}</Text>}
-          {hasReactNode(caption) && <Caption level="1" weight="regular" className="RichCell__caption">{caption}</Caption>}
+          {hasReactNode(text) && <Text weight="regular" css="RichCell__text">{text}</Text>}
+          {hasReactNode(caption) && <Caption level="1" weight="regular" css="RichCell__caption">{caption}</Caption>}
           {(hasReactNode(bottom) || hasReactNode(actions)) &&
-            <div className="RichCell__bottom">
+            <div css="RichCell__bottom">
               {bottom}
-              {hasReactNode(actions) && <div className="RichCell__actions">{actions}</div>}
+              {hasReactNode(actions) && <div css="RichCell__actions">{actions}</div>}
             </div>
           }
         </div>

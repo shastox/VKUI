@@ -33,7 +33,7 @@ const Headline: FunctionComponent<HeadlineProps> = ({
   return (
     <HeadlineComponent
       {...restProps}
-      className={classNames(getClassName('Headline', platform), `Headline--w-${headlineWeight}`, className)}
+      css={classNames(getClassName('Headline', platform), `Headline--w-${headlineWeight}`, className)}
     >
       {children}
     </HeadlineComponent>

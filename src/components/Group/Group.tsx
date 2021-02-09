@@ -44,13 +44,13 @@ const Group: FC<GroupProps> = (props) => {
     <section
       {...restProps}
       ref={getRootRef}
-      className={classNames(className, baseClassNames, `Group--sizeX-${sizeX}`, `Group--sizeY-${sizeY}`, `Group--${computedMode}`)}
+      css={classNames(className, baseClassNames, `Group--sizeX-${sizeX}`, `Group--sizeY-${sizeY}`, `Group--${computedMode}`)}
     >
-      <div className="Group__inner">
+      <div css="Group__inner">
         {header}
         {children}
         {hasReactNode(description) &&
-        <div className="Group__description">
+        <div css="Group__description">
           <Caption weight="regular" level="1">{description}</Caption>
         </div>
         }
@@ -58,7 +58,7 @@ const Group: FC<GroupProps> = (props) => {
 
       {separator !== 'hide' &&
         <Separator
-          className={classNames('Group__separator', {
+          css={classNames('Group__separator', {
             'Group__separator--force': separator === 'show',
           })}
           expanded={computedMode === 'card'}

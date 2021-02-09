@@ -167,7 +167,7 @@ export default class Preview extends PreviewParent {
                 )}
                 <div
                   key={`vkui-${styleGuideContext.integration}`}
-                  className={isPartial ? "vkui__root" : null}
+                  css={isPartial ? "vkui__root" : null}
                   style={isEmbedded ? {
                     marginTop: 8,
                     position: 'relative',

@@ -10,7 +10,7 @@ export interface DivProps extends HTMLAttributes<HTMLDivElement>, HasRootRef<HTM
 export const Div: FunctionComponent<DivProps> = ({ className, children, getRootRef, ...restProps }: DivProps) => {
   const platform = usePlatform();
   return (
-    <div {...restProps} ref={getRootRef} className={classNames(getClassName('Div', platform), className)}>
+    <div {...restProps} ref={getRootRef} css={classNames(getClassName('Div', platform), className)}>
       {children}
     </div>
   );

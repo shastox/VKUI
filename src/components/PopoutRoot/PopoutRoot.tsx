@@ -43,13 +43,13 @@ class PopoutRoot extends Component<PopoutRootProps & DOMProps> {
     return (
       <div
         {...restProps}
-        className={classNames('PopoutRoot', className)}
+        css={classNames('PopoutRoot', className)}
         ref={getRootRef}
       >
         {children}
         <AppRootPortal>
-          {!!popout && <div className={isDesktop ? 'PopoutRoot--absolute' : 'PopoutRoot__popout'}>{popout}</div>}
-          {!!modal && <div className="PopoutRoot__modal">{modal}</div>}
+          {!!popout && <div css={isDesktop ? 'PopoutRoot--absolute' : 'PopoutRoot__popout'}>{popout}</div>}
+          {!!modal && <div css="PopoutRoot__modal">{modal}</div>}
         </AppRootPortal>
       </div>
     );

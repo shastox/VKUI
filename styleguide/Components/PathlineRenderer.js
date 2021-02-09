@@ -28,7 +28,7 @@ export function PathlineRenderer({ classes, children }) {
     <StyleGuideContext.Consumer>
       {(styleGuideContext) => {
         return (
-          <div className={classes.pathline}>
+          <div css={classes.pathline}>
             <IntegrationSelect
               onChange={(e) => styleGuideContext.setContext({ integration: e.target.value })}
               value={styleGuideContext.integration}
@@ -62,12 +62,12 @@ export function PathlineRenderer({ classes, children }) {
               value={styleGuideContext.height}
             />
             &nbsp;|&nbsp;
-            <HasMouseCheckbox 
+            <HasMouseCheckbox
               onChange={(e) => styleGuideContext.setContext({ hasMouse: e.target.checked })}
               value={styleGuideContext.hasMouse}
             />
             &nbsp;|&nbsp;
-            <span className={classes.link}>
+            <span css={classes.link}>
               Исходники:&nbsp;
                 <Link
                   target="_blank"

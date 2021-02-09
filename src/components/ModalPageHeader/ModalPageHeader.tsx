@@ -31,26 +31,26 @@ const ModalPageHeader: FunctionComponent<ModalPageHeaderProps> = (props: ModalPa
   return (
     <div
       {...restProps}
-      className={classNames(getClassName('ModalPageHeader', platform), className, `ModalPageHeader--sizeX-${sizeX}`)}
+      css={classNames(getClassName('ModalPageHeader', platform), className, `ModalPageHeader--sizeX-${sizeX}`)}
       ref={getRef}
     >
-      <div className="ModalPageHeader__in">
-        <div className="ModalPageHeader__left">
+      <div css="ModalPageHeader__in">
+        <div css="ModalPageHeader__left">
           {left}
         </div>
 
-        <div className="ModalPageHeader__content">
-          <div className="ModalPageHeader__content-in">
+        <div css="ModalPageHeader__content">
+          <div css="ModalPageHeader__content-in">
             {isPrimitive ? <span>{children}</span> : children}
           </div>
         </div>
 
-        <div className="ModalPageHeader__right">
+        <div css="ModalPageHeader__right">
           {right}
         </div>
       </div>
 
-      {hasSeparator && <Separator wide className="ModalPageHeader__separator" />}
+      {hasSeparator && <Separator wide css="ModalPageHeader__separator" />}
     </div>
   );
 };

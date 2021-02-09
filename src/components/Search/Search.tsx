@@ -140,7 +140,7 @@ class Search extends Component<SearchProps, SearchState> {
 
     return (
       <div
-        className={classNames(getClassname('Search', platform), {
+        css={classNames(getClassname('Search', platform), {
           'Search--focused': this.state.focused,
           'Search--has-value': !!this.value,
           'Search--has-after': !!after,
@@ -148,40 +148,40 @@ class Search extends Component<SearchProps, SearchState> {
         }, className)}
         style={style}
       >
-        <div className="Search__in">
-          <div className="Search__width" />
-          <label className="Search__control">
+        <div css="Search__in">
+          <div css="Search__width" />
+          <label css="Search__control">
             <input
               {...inputProps}
               ref={this.inputRef}
               type="text"
-              className="Search__input"
+              css="Search__input"
               onFocus={this.onFocus}
               onBlur={this.onBlur}
               onChange={this.onChange}
               value={this.value}
             />
-            {platform === IOS && after && <div className="Search__after-width">{after}</div>}
-            <div className="Search__placeholder">
-              <div className="Search__placeholder-in">
+            {platform === IOS && after && <div css="Search__after-width">{after}</div>}
+            <div css="Search__placeholder">
+              <div css="Search__placeholder-in">
                 {before}
                 {platform === VKCOM
-                  ? <Text className="Search__placeholder-text" weight="regular">{placeholder}</Text>
-                  : <Title className="Search__placeholder-text" level="3" weight="regular">{placeholder}</Title>
+                  ? <Text css="Search__placeholder-text" weight="regular">{placeholder}</Text>
+                  : <Title css="Search__placeholder-text" level="3" weight="regular">{placeholder}</Title>
                 }
               </div>
-              {this.state.focused && platform === IOS && after && <div className="Search__after-width">{after}</div>}
+              {this.state.focused && platform === IOS && after && <div css="Search__after-width">{after}</div>}
             </div>
           </label>
-          <div className="Search__after" onClick={this.onCancel}>
-            <div className="Search__icons">
+          <div css="Search__after" onClick={this.onCancel}>
+            <div css="Search__icons">
               {icon &&
-                <Touch onStart={this.onIconClickStart} className="Search__icon">
+                <Touch onStart={this.onIconClickStart} css="Search__icon">
                   {icon}
                 </Touch>
               }
               {!!this.value &&
-                <Touch onStart={this.onIconCancelClickStart} className="Search__icon">
+                <Touch onStart={this.onIconCancelClickStart} css="Search__icon">
                   {platform === VKCOM
                     ? <Icon24Cancel />
                     : <Icon16Clear />
@@ -190,11 +190,11 @@ class Search extends Component<SearchProps, SearchState> {
               }
             </div>
             {platform === IOS && after &&
-              <div className="Search__after-in">{after}</div>
+              <div css="Search__after-in">{after}</div>
             }
           </div>
         </div>
-        {platform === VKCOM && <Separator className="Search__separator" wide />}
+        {platform === VKCOM && <Separator css="Search__separator" wide />}
       </div>
     );
   }

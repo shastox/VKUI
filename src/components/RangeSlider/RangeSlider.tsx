@@ -129,23 +129,23 @@ class RangeSliderDumb extends Component<RangeSliderProps> {
         onStart={this.onStart}
         onMove={this.onMove}
         onEnd={this.onEnd}
-        className={classNames(
+        css={classNames(
           getClassName('Slider', platform),
           className,
           `Slider--sizeY-${sizeY}`,
           disabled && 'Slider--disabled',
         )}
       >
-        <div ref={this.getRef} className="Slider__in">
+        <div ref={this.getRef} css="Slider__in">
           <div
-            className="Slider__dragger"
+            css="Slider__dragger"
             style={{
               width: `${percentEnd - percentStart}%`,
               left: `${percentStart}%`,
             }}
           >
-            <span className={classNames('Slider__thumb', 'Slider__thumb--start')} ref={this.thumbStart} />
-            <span className={classNames('Slider__thumb', 'Slider__thumb--end')} ref={this.thumbEnd} />
+            <span css={classNames('Slider__thumb', 'Slider__thumb--start')} ref={this.thumbStart} />
+            <span css={classNames('Slider__thumb', 'Slider__thumb--end')} ref={this.thumbEnd} />
           </div>
         </div>
       </Touch>

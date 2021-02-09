@@ -83,7 +83,7 @@ export const Removable: FC<RemovableProps> = withAdaptivity((props: RemovablePro
   return (
     <div
       {...restProps}
-      className={classNames(
+      css={classNames(
         getClassName('Removable', platform),
         `Removable--${align}`,
         `Removable--sizeY-${sizeY}`,
@@ -93,19 +93,19 @@ export const Removable: FC<RemovableProps> = withAdaptivity((props: RemovablePro
         className,
       )}
     >
-      <div className="Removable__content" style={platform === IOS ? { transform: `translateX(-${removeOffset}px)` } : null}>
+      <div css="Removable__content" style={platform === IOS ? { transform: `translateX(-${removeOffset}px)` } : null}>
         {platform === IOS && (
-          <button className="Removable__indicator" onClick={onRemoveActivateClick}>
-            <i className="Removable__indicator-in" />
+          <button css="Removable__indicator" onClick={onRemoveActivateClick}>
+            <i css="Removable__indicator-in" />
           </button>
         )}
 
-        <div className="Removable__children">
+        <div css="Removable__children">
           {children}
         </div>
 
         {(platform === ANDROID || platform === VKCOM) &&
-          <IconButton className="Removable__remove" onClick={onRemoveClick}>
+          <IconButton css="Removable__remove" onClick={onRemoveClick}>
             <Icon24Cancel />
           </IconButton>
         }
@@ -114,11 +114,11 @@ export const Removable: FC<RemovableProps> = withAdaptivity((props: RemovablePro
       {platform === IOS &&
         <button
           ref={removeButtonRef}
-          className="Removable__remove"
+          css="Removable__remove"
           onClick={onRemoveClick}
           style={{ transform: `translateX(-${removeOffset}px)` }}
         >
-          <span className="Removable__remove-in">{removePlaceholder}</span>
+          <span css="Removable__remove-in">{removePlaceholder}</span>
         </button>
       }
     </div>

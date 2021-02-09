@@ -74,7 +74,7 @@ const AppRoot: FC<AppRootProps> = ({ children, embedded, sizeX, hasMouse }) => {
   );
 
   return (
-    <div ref={rootRef} className={classNames('AppRoot', {
+    <div ref={rootRef} css={classNames('AppRoot', {
       'AppRoot--no-mouse': !hasMouse,
     })}>
       <AppRootContext.Provider value={{

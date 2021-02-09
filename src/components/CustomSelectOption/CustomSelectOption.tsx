@@ -32,16 +32,16 @@ const CustomSelectOption: FC<CustomSelectOptionProps> = ({
       role="option"
       title={title}
       aria-selected={selected}
-      className={classNames('CustomSelectOption', className, {
+      css={classNames('CustomSelectOption', className, {
         ['CustomSelectOption--hover']: hovered,
         ['CustomSelectOption--selected']: !!selected,
       })}
     >
-      {hasReactNode(before) && <div className="CustomSelectOption__before">{before}</div>}
-      <div className="CustomSelectOption__label">{children}</div>
-      {hasReactNode(after) && <div className="CustomSelectOption__after">{after}</div>}
+      {hasReactNode(before) && <div css="CustomSelectOption__before">{before}</div>}
+      <div css="CustomSelectOption__label">{children}</div>
+      {hasReactNode(after) && <div css="CustomSelectOption__after">{after}</div>}
       {selected && (
-        <div className="CustomSelectOption__selectedIcon">
+        <div css="CustomSelectOption__selectedIcon">
           <Icon16Done fill="var(--accent)" />
         </div>
       )}

@@ -124,13 +124,13 @@ export default class CustomScrollView extends React.Component<Props> {
   };
 
   render() {
-    return <div className="CustomScrollView">
-      <div className="CustomScrollView__box" tabIndex={-1} ref={this.box} onScroll={this.scroll}>
+    return <div css="CustomScrollView">
+      <div css="CustomScrollView__box" tabIndex={-1} ref={this.box} onScroll={this.scroll}>
         {this.props.children}
       </div>
 
-      <div className="CustomScrollView__barY" ref={this.barY}>
-        <div className="CustomScrollView__trackerY" ref={this.trackerY} onMouseDown={this.onDragStart} />
+      <div css="CustomScrollView__barY" ref={this.barY}>
+        <div css="CustomScrollView__trackerY" ref={this.trackerY} onMouseDown={this.onDragStart} />
       </div>
     </div>;
   }

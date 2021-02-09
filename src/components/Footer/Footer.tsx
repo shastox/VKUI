@@ -6,7 +6,7 @@ import Caption from '../Typography/Caption/Caption';
 
 const Footer: FunctionComponent<DivProps> = ({ className, children, ...restProps }: DivProps) => {
   return (
-    <Caption {...restProps} level="1" weight="regular" className={classNames('Footer', className)}>
+    <Caption {...restProps} level="1" weight="regular" css={classNames('Footer', className)}>
       {children}
     </Caption>
   );

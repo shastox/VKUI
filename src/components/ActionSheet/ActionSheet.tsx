@@ -111,7 +111,7 @@ class ActionSheet extends Component<ActionSheetProps, ActionSheetState> {
       <PopoutWrapper
         closing={this.state.closing}
         alignY="bottom"
-        className={className}
+        css={className}
         style={style}
         onClick={this.onClose}
         hasMask={!isDesktop}
@@ -129,13 +129,13 @@ class ActionSheet extends Component<ActionSheetProps, ActionSheetState> {
             {...restProps}
           >
             {(hasReactNode(header) || hasReactNode(text)) &&
-              <header className="ActionSheet__header">
+              <header css="ActionSheet__header">
                 {hasReactNode(header) &&
-                  <Caption level="1" weight={platform === IOS ? 'semibold' : 'medium'} className="ActionSheet__title">
+                  <Caption level="1" weight={platform === IOS ? 'semibold' : 'medium'} css="ActionSheet__title">
                     {header}
                   </Caption>
                 }
-                {hasReactNode(text) && <Caption level="1" weight="regular" className="ActionSheet__text">{text}</Caption>}
+                {hasReactNode(text) && <Caption level="1" weight="regular" css="ActionSheet__text">{text}</Caption>}
               </header>
             }
             {children}

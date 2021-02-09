@@ -23,12 +23,12 @@ const Switch: FunctionComponent<SwitchProps> = ({
   const platform = usePlatform();
 
   return (
-    <label className={classNames(
+    <label css={classNames(
       getClassName('Switch', platform),
       className,
       `Switch--sizeY-${sizeY}`)} style={style} ref={getRootRef}>
-      <input {...restProps} type="checkbox" className="Switch__self" ref={getRef} />
-      <span className="Switch__pseudo" />
+      <input {...restProps} type="checkbox" css="Switch__self" ref={getRef} />
+      <span css="Switch__pseudo" />
     </label>
   );
 };

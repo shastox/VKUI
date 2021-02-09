@@ -62,14 +62,14 @@ export const WriteBarIcon: FC<WriteBarIconProps> = (props) => {
   return (
     <button
       {...restProps}
-      className={classNames(getClassName('WriteBarIcon', platform), {
+      css={classNames(getClassName('WriteBarIcon', platform), {
         [`WriteBarIcon--${mode}`]: !!mode,
         'WriteBarIcon--disabled': restProps.disabled,
       }, className)}
     >
       {childrenResolved}
       {count ?
-        <div className="WriteBarIcon__count">
+        <div css="WriteBarIcon__count">
           <Caption weight="regular" level="2">{count}</Caption>
         </div> :
         null

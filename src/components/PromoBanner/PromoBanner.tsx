@@ -75,13 +75,13 @@ const PromoBanner = (props: PromoBannerProps) => {
   }, [statsPixels.playbackStarted]);
 
   return (
-    <div className={classNames(getClassName('PromoBanner', platform), className)} {...restProps}>
-      <div className="PromoBanner__head">
-        <Caption weight="regular" level="1" className="PromoBanner__label">{bannerData.advertisingLabel || 'Advertisement'}</Caption>
-        {ageRestrictions != null && <Caption weight="regular" level="1" className="PromoBanner__age">{ageRestrictions}+</Caption>}
+    <div css={classNames(getClassName('PromoBanner', platform), className)} {...restProps}>
+      <div css="PromoBanner__head">
+        <Caption weight="regular" level="1" css="PromoBanner__label">{bannerData.advertisingLabel || 'Advertisement'}</Caption>
+        {ageRestrictions != null && <Caption weight="regular" level="1" css="PromoBanner__age">{ageRestrictions}+</Caption>}
 
         {!props.isCloseButtonHidden &&
-          <div className="PromoBanner__close" onClick={props.onClose}>
+          <div css="PromoBanner__close" onClick={props.onClose}>
             <Icon24Dismiss />
           </div>
         }
@@ -101,7 +101,7 @@ const PromoBanner = (props: PromoBannerProps) => {
       </SimpleCell>
 
       {currentPixel.length > 0 &&
-        <div className="PromoBanner__pixels">
+        <div css="PromoBanner__pixels">
           <img src={currentPixel} alt="" />
         </div>
       }

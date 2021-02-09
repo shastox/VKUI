@@ -260,12 +260,12 @@ class PullToRefresh extends PureComponent<PullToRefreshProps & DOMProps, PullToR
           onStart={this.onTouchStart}
           onMove={this.onTouchMove}
           onEnd={this.onTouchEnd}
-          className={classNames(getClassName('PullToRefresh', platform), className, {
+          css={classNames(getClassName('PullToRefresh', platform), className, {
             'PullToRefresh--watching': watching,
             'PullToRefresh--refreshing': refreshing,
           })}
         >
-          <FixedLayout className="PullToRefresh__controls">
+          <FixedLayout css="PullToRefresh__controls">
             <PullToRefreshSpinner
               style={{
                 transform: spinnerTransform,
@@ -278,7 +278,7 @@ class PullToRefresh extends PureComponent<PullToRefreshProps & DOMProps, PullToR
           </FixedLayout>
 
           <div
-            className="PullToRefresh__content"
+            css="PullToRefresh__content"
             ref={this.contentRef}
             style={{
               transform: contentTransform,

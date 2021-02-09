@@ -13,7 +13,7 @@ const List: FunctionComponent<HTMLAttributes<HTMLDivElement>> = ({
   const baseClassName = getClassName('List', platform);
 
   return (
-    <div {...restProps} className={classNames(baseClassName, className)}>{children}</div>
+    <div {...restProps} css={classNames(baseClassName, className)}>{children}</div>
   );
 };
 

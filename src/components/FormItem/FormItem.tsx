@@ -42,16 +42,16 @@ export const FormItem: FC<FormItemProps> = withAdaptivity((props: FormItemProps 
 
   const wrappedChildren = (
     <>
-      {hasReactNode(top) && <Subhead weight="regular" className="FormItem__top">{top}</Subhead>}
+      {hasReactNode(top) && <Subhead weight="regular" css="FormItem__top">{top}</Subhead>}
       {children}
-      {hasReactNode(bottom) && <Caption level="1" weight="regular" className="FormItem__bottom">{bottom}</Caption>}
+      {hasReactNode(bottom) && <Caption level="1" weight="regular" css="FormItem__bottom">{bottom}</Caption>}
     </>
   );
 
   return (
     <Component
       {...restProps}
-      className={classNames(
+      css={classNames(
         getClassName('FormItem', platform),
         `FormItem--${status}`,
         `FormItem--sizeY-${sizeY}`,

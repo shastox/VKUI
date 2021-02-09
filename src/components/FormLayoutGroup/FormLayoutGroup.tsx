@@ -33,7 +33,7 @@ const FormLayoutGroup: FunctionComponent<FormLayoutGroupProps> = withAdaptivity(
   const [paddedTop, togglePaddedTop] = useState<boolean>(false);
   const childrenRef = useRef<HTMLDivElement>(null);
 
-  const wrappedChildren = <div ref={childrenRef} className="FormLayoutGroup__children">{children}</div>;
+  const wrappedChildren = <div ref={childrenRef} css="FormLayoutGroup__children">{children}</div>;
 
   useEffect(() => {
     if (isRemovable) {
@@ -45,7 +45,7 @@ const FormLayoutGroup: FunctionComponent<FormLayoutGroupProps> = withAdaptivity(
 
   return (
     <div
-      className={classNames(
+      css={classNames(
         getClassName('FormLayoutGroup', platform),
         `FormLayoutGroup--sizeY-${sizeY}`,
         `FormLayoutGroup--${mode}`,

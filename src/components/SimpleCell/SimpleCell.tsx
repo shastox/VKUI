@@ -88,7 +88,7 @@ const SimpleCell: FC<SimpleCellProps> = ({
   return (
     <RootComponent
       {...props}
-      className={
+      css={
         classNames(
           className,
           getClassName('SimpleCell', platform),
@@ -101,22 +101,22 @@ const SimpleCell: FC<SimpleCellProps> = ({
       }
     >
       {before}
-      <div className="SimpleCell__main">
-        <div className="SimpleCell__content">
-          <SimpleCellTypography className="SimpleCell__children">{children}</SimpleCellTypography>
+      <div css="SimpleCell__main">
+        <div css="SimpleCell__content">
+          <SimpleCellTypography css="SimpleCell__children">{children}</SimpleCellTypography>
           {hasReactNode(badge) &&
-            <span className="SimpleCell__badge">
+            <span css="SimpleCell__badge">
               {badge}
             </span>
           }
         </div>
-        {description && <Caption weight="regular" level="1" className="SimpleCell__description">{description}</Caption>}
+        {description && <Caption weight="regular" level="1" css="SimpleCell__description">{description}</Caption>}
       </div>
       {hasReactNode(indicator) &&
-        <SimpleCellTypography className="SimpleCell__indicator">{indicator}</SimpleCellTypography>
+        <SimpleCellTypography css="SimpleCell__indicator">{indicator}</SimpleCellTypography>
       }
       {hasAfter &&
-        <div className="SimpleCell__after">
+        <div css="SimpleCell__after">
           {after}
           {expandable && platform === IOS && <Icon24Chevron />}
         </div>

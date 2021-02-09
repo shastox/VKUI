@@ -29,13 +29,13 @@ const PullToRefreshSpinner: FunctionComponent<PullToRefreshSpinnerProps> = ({
 
   return (
     <div
-      className={classNames('PullToRefresh__spinner', {
+      css={classNames('PullToRefresh__spinner', {
         'PullToRefresh__spinner--on': on,
       })}
       style={style}
     >
       <svg
-        className="PullToRefresh__spinner-self"
+        css="PullToRefresh__spinner-self"
         style={{
           width: size,
           height: size,
@@ -51,7 +51,7 @@ const PullToRefreshSpinner: FunctionComponent<PullToRefreshSpinnerProps> = ({
           }}
         >
           <circle
-            className="PullToRefresh__spinner-path"
+            css="PullToRefresh__spinner-path"
             fill="none"
             strokeDasharray={dasharray}
             strokeDashoffset={dashoffset}

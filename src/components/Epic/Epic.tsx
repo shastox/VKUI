@@ -24,7 +24,7 @@ export const Epic: FC<EpicProps> = (props: EpicProps) => {
   const story = (React.Children.toArray(children) as ReactElement[]).find((story) => story.props.id === activeStory) || null;
 
   return (
-    <div {...restProps} className={classNames(getClassName('Epic', platform), className)}>
+    <div {...restProps} css={classNames(getClassName('Epic', platform), className)}>
       <ScrollSaver
         key={activeStory}
         initialScroll={scroll[activeStory] || 0}

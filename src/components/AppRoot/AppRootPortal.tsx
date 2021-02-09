@@ -6,6 +6,6 @@ import { AppRootContext } from './AppRootContext';
 export const AppRootPortal: FC<PropsWithChildren<{ className?: string }>> = ({ children, className }) => {
   const { portalRoot, embedded } = useContext(AppRootContext);
   return embedded && portalRoot
-    ? createPortal((<div className={className}>{children}</div>), portalRoot)
+    ? createPortal((<div css={className}>{children}</div>), portalRoot)
     : <>{children}</>;
 };

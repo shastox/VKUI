@@ -34,7 +34,7 @@ const Caption: FunctionComponent<CaptionProps> = ({
   return (
     <Component
       {...restProps}
-      className={
+      css={
         classNames(
           getClassName('Caption', platform),
           `Caption--w-${captionWeight}`,

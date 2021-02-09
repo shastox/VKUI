@@ -25,9 +25,9 @@ export const FormStatus: FunctionComponent<FormStatusProps> = ({
   return (
     <div
       {...restProps}
-      className={classNames(getClassName('FormStatus', platform), `FormStatus--${mode}`, className)}
+      css={classNames(getClassName('FormStatus', platform), `FormStatus--${mode}`, className)}
     >
-      {hasReactNode(header) && <Headline weight="medium" className="FormStatus__header">{header}</Headline>}
+      {hasReactNode(header) && <Headline weight="medium" css="FormStatus__header">{header}</Headline>}
       {dangerouslySetInnerHTML &&
         <Caption level="1" weight="regular" dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
       }

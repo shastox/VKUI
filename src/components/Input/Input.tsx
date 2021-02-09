@@ -26,11 +26,11 @@ const Input: FunctionComponent<InputProps> = ({
   const platform = usePlatform();
   return (
     <FormField
-      className={classNames(getClassName('Input', platform), className, { [`Input--${align}`]: !!align }, `Input--sizeY-${sizeY}`)}
+      css={classNames(getClassName('Input', platform), className, { [`Input--${align}`]: !!align }, `Input--sizeY-${sizeY}`)}
       style={style}
       getRootRef={getRootRef}
     >
-      <input {...restProps} className="Input__el" ref={getRef} />
+      <input {...restProps} css="Input__el" ref={getRef} />
     </FormField>
   );
 };

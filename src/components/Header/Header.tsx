@@ -31,38 +31,38 @@ function renderChildren({ children, platform, mode }: Pick<HeaderProps, 'childre
     case Platform.ANDROID:
       switch (mode) {
         case 'primary':
-          return <Headline className="Header__content" weight="medium">{children}</Headline>;
+          return <Headline css="Header__content" weight="medium">{children}</Headline>;
         case 'secondary':
-          return <Caption className="Header__content" level="1" weight="medium" caps>{children}</Caption>;
+          return <Caption css="Header__content" level="1" weight="medium" caps>{children}</Caption>;
         case 'tertiary':
-          return <Headline className="Header__content" weight="medium">{children}</Headline>;
+          return <Headline css="Header__content" weight="medium">{children}</Headline>;
       }
       break;
     case Platform.IOS:
       switch (mode) {
         case 'primary':
         case 'tertiary':
-          return <Title className="Header__content" weight="semibold" level="3">{children}</Title>;
+          return <Title css="Header__content" weight="semibold" level="3">{children}</Title>;
         case 'secondary':
-          return <Caption className="Header__content" level="1" weight="semibold" caps>{children}</Caption>;
+          return <Caption css="Header__content" level="1" weight="semibold" caps>{children}</Caption>;
       }
       break;
     case Platform.VKCOM:
       switch (mode) {
         case 'primary':
-          return <Headline className="Header__content" weight="regular">{children}</Headline>;
+          return <Headline css="Header__content" weight="regular">{children}</Headline>;
         case 'secondary':
         case 'tertiary':
-          return <Caption className="Header__content" level="1" weight="regular">{children}</Caption>;
+          return <Caption css="Header__content" level="1" weight="regular">{children}</Caption>;
       }
   }
 }
 
 function renderAside({ aside, platform }: { aside: HeaderProps['aside']; platform: PlatformType }) {
   if (platform === Platform.VKCOM) {
-    return <Subhead weight="regular" className="Header__aside">{aside}</Subhead>;
+    return <Subhead weight="regular" css="Header__aside">{aside}</Subhead>;
   }
-  return <Text weight="regular" className="Header__aside">{aside}</Text>;
+  return <Text weight="regular" css="Header__aside">{aside}</Text>;
 }
 
 const Header: FunctionComponent<HeaderProps> = ({
@@ -83,23 +83,23 @@ const Header: FunctionComponent<HeaderProps> = ({
     <div
       {...restProps}
       ref={getRootRef}
-      className={classNames(baseClassNames, className, `Header--mode-${mode}`, {
+      css={classNames(baseClassNames, className, `Header--mode-${mode}`, {
         'Header--pi': isPrimitiveReactNode(indicator),
       })}
     >
-      <div className="Header__in">
-        <div className="Header__main">
+      <div css="Header__in">
+        <div css="Header__main">
           {renderChildren({
             children: (
               <Fragment>
-                <div className={multiline ? 'Header__content-base--multiline' : 'Header__content-base'}>{children}</div>
-                {hasReactNode(indicator) && <Caption className="Header__indicator" weight="regular" level="1">{indicator}</Caption>}
+                <div css={multiline ? 'Header__content-base--multiline' : 'Header__content-base'}>{children}</div>
+                {hasReactNode(indicator) && <Caption css="Header__indicator" weight="regular" level="1">{indicator}</Caption>}
               </Fragment>
             ),
             platform,
             mode,
           })}
-          {hasReactNode(subtitle) && <Caption className="Header__subtitle" weight="regular" level="1">{subtitle}</Caption>}
+          {hasReactNode(subtitle) && <Caption css="Header__subtitle" weight="regular" level="1">{subtitle}</Caption>}
         </div>
         {hasReactNode(aside) && renderAside({ aside, platform })}
       </div>

@@ -14,10 +14,10 @@ const ScreenSpinner: FunctionComponent<ScreenSpinnerProps> = (props: ScreenSpinn
 
   return (
     <PopoutWrapper
-      className={classNames(getClassName('ScreenSpinner', platform), className)}
+      css={classNames(getClassName('ScreenSpinner', platform), className)}
       style={style}
     >
-      <div className="ScreenSpinner__container">
+      <div css="ScreenSpinner__container">
         <Spinner {...restProps} />
       </div>
     </PopoutWrapper>

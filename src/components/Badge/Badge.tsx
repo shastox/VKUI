@@ -17,7 +17,7 @@ export const Badge: FunctionComponent<BadgeProps> = ({
 
   return (
     <div
-      className={classNames(
+      css={classNames(
         getClassName('Badge', platform),
         `Badge--${mode}`,
         className,

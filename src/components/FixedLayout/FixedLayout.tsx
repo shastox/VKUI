@@ -141,12 +141,12 @@ class FixedLayout extends React.Component<FixedLayoutProps & DOMProps, FixedLayo
       <div
         {...restProps}
         ref={this.getRef}
-        className={classNames(getClassName('FixedLayout', platform), {
+        css={classNames(getClassName('FixedLayout', platform), {
           'FixedLayout--filled': filled,
         }, `FixedLayout--${vertical}`, className)}
         style={{ ...style, ...this.state }}
       >
-        <div className="FixedLayout__in">{children}</div>
+        <div css="FixedLayout__in">{children}</div>
       </div>
     );
   }

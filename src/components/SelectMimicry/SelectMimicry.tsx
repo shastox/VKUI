@@ -42,7 +42,7 @@ const SelectMimicry: FunctionComponent<SelectMimicryProps> = ({
     <FormField
       {...restProps}
       tabIndex={disabled ? null : tabIndex}
-      className={classNames(getClassName('Select', platform), 'Select--mimicry', {
+      css={classNames(getClassName('Select', platform), 'Select--mimicry', {
         'Select--not-selected': !children,
         'Select--multiline': multiline,
         'Select--disabled': disabled,
@@ -53,8 +53,8 @@ const SelectMimicry: FunctionComponent<SelectMimicryProps> = ({
       getRootRef={getRootRef}
       onClick={disabled ? null : onClick}
     >
-      <TypographyComponent weight="regular" className="Select__container">
-        <div className="Select__title">{children || placeholder}</div>
+      <TypographyComponent weight="regular" css="Select__container">
+        <div css="Select__title">{children || placeholder}</div>
         {sizeY === SizeType.COMPACT ? <Icon20Dropdown /> : <Icon24Dropdown />}
       </TypographyComponent>
     </FormField>

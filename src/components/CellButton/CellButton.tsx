@@ -22,7 +22,7 @@ const CellButton: React.FunctionComponent<CellButtonProps> = ({
   return (
     <SimpleCell
       {...restProps}
-      className={classNames(
+      css={classNames(
         getClassName('CellButton', platform),
         `CellButton--${mode}`,
         {

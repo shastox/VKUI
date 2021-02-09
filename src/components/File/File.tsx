@@ -31,7 +31,7 @@ const File: FunctionComponent<FileProps> = (props: FileProps) => {
   return (
     <Button
       align={align}
-      className={classNames(getClassName('File', platform), className)}
+      css={classNames(getClassName('File', platform), className)}
       stretched={stretched}
       mode={mode}
       size={controlSize}
@@ -44,7 +44,7 @@ const File: FunctionComponent<FileProps> = (props: FileProps) => {
         onClick && onClick(e);
       }}
     >
-      <input {...restProps} className="File__input" type="file" ref={getInputRef} />
+      <input {...restProps} css="File__input" type="file" ref={getInputRef} />
       {children}
     </Button>
   );

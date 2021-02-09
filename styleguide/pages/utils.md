@@ -39,6 +39,6 @@ import { usePlatform, getClassName } from '@vkontakte/vkui'
 const MyButton = ({ children }) => {
   const platform = usePlatform();
   const baseClassNames = getClassName('MyButton', platform); // 'MyButton MyButton--ios'
-  return <button className={baseClassNames}>{children}</button>;
+  return <button css={baseClassNames}>{children}</button>;
 }
 ```

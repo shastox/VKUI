@@ -13,6 +13,9 @@
   "globals": {
     "Element": true
   },
+  "plugins": [
+    "react"
+  ],
   "env": {
     "es6": true, // Enable global es6 variables, like Set, Map, etc
     "browser": true,
@@ -25,6 +28,8 @@
     "@typescript-eslint/no-unused-vars": ["error", {
       "ignoreRestSiblings": true
     }],
+    "react/forbid-component-props": ["error", { "forbid": ["className"] }],
+    "react/forbid-dom-props": ["error", { "forbid": ["className"] }],
     "no-restricted-imports": ["error", {
       "patterns": ["@vkontakte/icons/dist/*"]
     }]

@@ -237,7 +237,7 @@ const ChipsSelect = <Option extends ChipsInputOption>(props: ChipsSelectProps<Op
 
   return (
     <div
-      className={classNames('ChipsSelect', `ChipsSelect--sizeY-${sizeY}`, className)}
+      css={classNames('ChipsSelect', `ChipsSelect--sizeY-${sizeY}`, className)}
       ref={rootRef}
       style={style}
     >
@@ -253,7 +253,7 @@ const ChipsSelect = <Option extends ChipsInputOption>(props: ChipsSelectProps<Op
         onFocus={handleFocus}
         onKeyDown={handleKeyDown}
         placeholder={placeholder}
-        className={classNames({
+        css={classNames({
           ['ChipsSelect__open']: opened,
           ['ChipsSelect__open--popupDirectionTop']: popupDirection === 'top',
         })}
@@ -261,19 +261,19 @@ const ChipsSelect = <Option extends ChipsInputOption>(props: ChipsSelectProps<Op
         disabled={disabled}
         onInputChange={handleInputChange}
       />
-      <div className="ChipsSelect__toggle">
+      <div css="ChipsSelect__toggle">
         <Icon20Dropdown />
       </div>
       {opened &&
         <div
-          className={classNames('ChipsSelect__options', {
+          css={classNames('ChipsSelect__options', {
             ['ChipsSelect__options--popupDirectionTop']: popupDirection === 'top',
           })}
           onMouseLeave={() => setFocusedOptionIndex(null)}
         >
           <CustomScrollView ref={scrollViewRef}>
             {fetching ? (
-              <div className="ChipsSelect__fetching">
+              <div css="ChipsSelect__fetching">
                 <Spinner size="small" />
               </div>
             ) : (
@@ -288,7 +288,7 @@ const ChipsSelect = <Option extends ChipsInputOption>(props: ChipsSelectProps<Op
                   </CustomSelectOption>
                 )}
                 {!filteredOptions?.length && !showCreatable && emptyText ? (
-                  <Caption level="1" weight="regular" className="ChipsSelect__empty">{emptyText}</Caption>
+                  <Caption level="1" weight="regular" css="ChipsSelect__empty">{emptyText}</Caption>
                 ) :
                   filteredOptions.map((option: Option, index: number) => {
                     const label = getOptionLabel(option);

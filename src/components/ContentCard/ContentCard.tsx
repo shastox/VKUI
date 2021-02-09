@@ -55,14 +55,14 @@ const ContentCard: FC<ContentCardProps> = (props) => {
   const platform = usePlatform();
 
   return (
-    <Card mode={mode} getRootRef={getRootRef} className={classNames(className, getClassname('ContentCard', platform))} style={style}>
-      <Tappable disabled={disabled} onClick={onClick} className="ContentCard__tappable">
-        {image && <img {...restProps} ref={getRef} src={image} alt={alt} className="ContentCard__img" style={{ maxHeight: props.maxHeight }} width="100%" />}
-        <div className="ContentCard__body">
-          {hasReactNode(subtitle) && <Caption caps className="ContentCard__caption" weight="semibold" level="3">{subtitle}</Caption>}
-          {hasReactNode(header) && <Title className="ContentCard__title" weight="semibold" level="3">{header}</Title>}
-          {hasReactNode(text) && <Text className="ContentCard__text" weight="regular">{text}</Text>}
-          {hasReactNode(caption) && <Caption className="ContentCard__caption" weight="regular" level="1">{caption}</Caption>}
+    <Card mode={mode} getRootRef={getRootRef} css={classNames(className, getClassname('ContentCard', platform))} style={style}>
+      <Tappable disabled={disabled} onClick={onClick} css="ContentCard__tappable">
+        {image && <img {...restProps} ref={getRef} src={image} alt={alt} css="ContentCard__img" style={{ maxHeight: props.maxHeight }} width="100%" />}
+        <div css="ContentCard__body">
+          {hasReactNode(subtitle) && <Caption caps css="ContentCard__caption" weight="semibold" level="3">{subtitle}</Caption>}
+          {hasReactNode(header) && <Title css="ContentCard__title" weight="semibold" level="3">{header}</Title>}
+          {hasReactNode(text) && <Text css="ContentCard__text" weight="regular">{text}</Text>}
+          {hasReactNode(caption) && <Caption css="ContentCard__caption" weight="regular" level="1">{caption}</Caption>}
         </div>
       </Tappable>
     </Card>

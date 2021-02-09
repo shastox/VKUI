@@ -15,7 +15,7 @@ const CardGrid: FunctionComponent<CardGridProps> = ({ children, className, size,
   return (
     <div
       {...restProps}
-      className={classNames(
+      css={classNames(
         getClassName('CardGrid', platform),
         `CardGrid--${size}`,
         `CardGrid--sizeX-${sizeX}`,

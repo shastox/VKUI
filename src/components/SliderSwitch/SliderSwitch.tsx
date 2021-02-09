@@ -126,14 +126,14 @@ export default class SliderSwitch extends React.Component<SliderSwitchProps, Sli
     return (
       <div
         {...restProps}
-        className={classNames('SliderSwitch', className)}
+        css={classNames('SliderSwitch', className)}
         onKeyDown={this.switchByKey}
         onMouseLeave={this.resetFocusedOption}
       >
         {!firstActive && !secondActive &&
-          <div className="SliderSwitch__border" />
+          <div css="SliderSwitch__border" />
         }
-        <div className={classNames(
+        <div css={classNames(
           'SliderSwitch__slider',
           {
             ['SliderSwitch--firstActive']: firstActive,

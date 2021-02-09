@@ -174,17 +174,17 @@ class Slider extends Component<SliderProps, SliderState> {
     return (
       <div
         {...restProps}
-        className={classNames(
+        css={classNames(
           getClassName('Slider', platform),
           className,
           `Slider--sizeY-${sizeY}`,
           disabled && 'Slider--disabled',
         )}
       >
-        <Touch getRootRef={this.getRef} onStart={this.onStart} onMoveX={this.onMoveX} className="Slider__in">
-          <div className="Slider__dragger" style={{ width: `${this.state.percentPosition}%` }}>
+        <Touch getRootRef={this.getRef} onStart={this.onStart} onMoveX={this.onMoveX} css="Slider__in">
+          <div css="Slider__dragger" style={{ width: `${this.state.percentPosition}%` }}>
             <span
-              className={classNames('Slider__thumb', 'Slider__thumb--end')}
+              css={classNames('Slider__thumb', 'Slider__thumb--end')}
             />
           </div>
         </Touch>

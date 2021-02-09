@@ -111,34 +111,34 @@ export const WriteBar: FC<WriteBarProps> = (props: WriteBarProps) => {
   return (
     <div
       ref={getRootRef}
-      className={classNames(getClassName('WriteBar', platform), className)}
+      css={classNames(getClassName('WriteBar', platform), className)}
       style={style}
     >
-      <form className="WriteBar__form" onSubmit={(e) => e.preventDefault()}>
+      <form css="WriteBar__form" onSubmit={(e) => e.preventDefault()}>
         {hasReactNode(before) &&
-        <div className="WriteBar__before">
+        <div css="WriteBar__before">
           {before}
         </div>
         }
 
-        <div className="WriteBar__formIn">
+        <div css="WriteBar__formIn">
           <textarea
             {...restProps}
-            className="WriteBar__textarea"
+            css="WriteBar__textarea"
             onChange={onTextareaChange}
             ref={getTextareaElRef}
             value={value}
           />
 
           {hasReactNode(inlineAfter) &&
-          <div className="WriteBar__inlineAfter">
+          <div css="WriteBar__inlineAfter">
             {inlineAfter}
           </div>
           }
         </div>
 
         {hasReactNode(after) &&
-        <div className="WriteBar__after">
+        <div css="WriteBar__after">
           {after}
         </div>
         }

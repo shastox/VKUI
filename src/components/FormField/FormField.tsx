@@ -37,10 +37,10 @@ const FormField: React.FunctionComponent<FormFieldProps> = ({
       ref={getRootRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={classNames(getClassName('FormField', platform), className)}
+      css={classNames(getClassName('FormField', platform), className)}
     >
       {children}
-      <div className={classNames('FormField__border', {
+      <div css={classNames('FormField__border', {
         'FormField__border--hover': hover,
       })} />
     </Component>

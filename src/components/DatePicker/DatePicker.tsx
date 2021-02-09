@@ -173,9 +173,9 @@ class DatePicker extends Component<DatePickerProps, DatePickerState> {
     const { day, month, year } = this.state;
 
     return (
-      <div className={classNames('DatePicker', className)} {...restProps}>
-        <div className="DatePicker__container">
-          <div className="DatePicker__day">
+      <div css={classNames('DatePicker', className)} {...restProps}>
+        <div css="DatePicker__container">
+          <div css="DatePicker__day">
             <CustomSelect
               name="day"
               value={day}
@@ -185,7 +185,7 @@ class DatePicker extends Component<DatePickerProps, DatePickerState> {
               onChange={this.onSelectChange}
             />
           </div>
-          <div className="DatePicker__month">
+          <div css="DatePicker__month">
             <CustomSelect
               name="month"
               value={month}
@@ -195,7 +195,7 @@ class DatePicker extends Component<DatePickerProps, DatePickerState> {
               onChange={this.onSelectChange}
             />
           </div>
-          <div className="DatePicker__year">
+          <div css="DatePicker__year">
             <CustomSelect
               name="year"
               value={year}

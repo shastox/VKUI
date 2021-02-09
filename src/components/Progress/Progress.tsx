@@ -17,10 +17,10 @@ const Progress: FunctionComponent<ProgressProps> = (props: ProgressProps) => {
     <div
       {...restProps}
       ref={getRootRef}
-      className={classNames(getClassName('Progress', platform), className)}
+      css={classNames(getClassName('Progress', platform), className)}
     >
-      <div className="Progress__bg" />
-      <div className="Progress__in" style={{ width: `${value}%` }} />
+      <div css="Progress__bg" />
+      <div css="Progress__in" style={{ width: `${value}%` }} />
     </div>
   );
 };

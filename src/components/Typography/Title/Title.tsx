@@ -53,7 +53,7 @@ const Title: FunctionComponent<TitleProps> = ({
       Component={TitleComponent}
       {...restProps}
       weight={titleWeight as HeadlineProps['weight']}
-      className={className}
+      css={className}
     >
       {children}
     </Headline>;
@@ -62,7 +62,7 @@ const Title: FunctionComponent<TitleProps> = ({
   return (
     <TitleComponent
       {...restProps}
-      className={
+      css={
         classNames(
           getClassName('Title', platform),
           `Title--w-${titleWeight}`,

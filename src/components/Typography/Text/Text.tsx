@@ -30,7 +30,7 @@ const Text: FunctionComponent<TextProps> = ({
   return (
     <Component
       {...restProps}
-      className={classNames(getClassName('Text', platform), `Text--w-${textWeight}`, className)}
+      css={classNames(getClassName('Text', platform), `Text--w-${textWeight}`, className)}
     >
       {children}
     </Component>

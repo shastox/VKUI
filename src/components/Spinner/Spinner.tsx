@@ -12,13 +12,13 @@ export interface SpinnerProps extends React.HTMLAttributes<HTMLDivElement> {
 const svgSpinner = (size: SpinnerProps['size']): React.ReactElement => {
   switch (size) {
     case 'large':
-      return <Icon44Spinner className="Spinner__self" />;
+      return <Icon44Spinner css="Spinner__self" />;
     case 'medium':
-      return <Icon32Spinner className="Spinner__self" />;
+      return <Icon32Spinner css="Spinner__self" />;
     case 'small':
-      return <Icon16Spinner className="Spinner__self" />;
+      return <Icon16Spinner css="Spinner__self" />;
     default:
-      return <Icon24Spinner className="Spinner__self" />;
+      return <Icon24Spinner css="Spinner__self" />;
   }
 };
 
@@ -26,7 +26,7 @@ const Spinner: FunctionComponent<SpinnerProps> = ({ className, size, ...restProp
   const platform = usePlatform();
 
   return (
-    <div {...restProps} className={classNames(getClassName('Spinner', platform), className)}>
+    <div {...restProps} css={classNames(getClassName('Spinner', platform), className)}>
       {svgSpinner(size)}
     </div>
   );

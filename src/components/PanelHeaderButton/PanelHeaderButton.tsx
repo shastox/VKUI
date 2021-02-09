@@ -53,7 +53,7 @@ const PanelHeaderButton: FunctionComponent<PanelHeaderButtonProps> = ({
       {...restProps}
       Component={Component}
       activeEffectDelay={200}
-      className={classNames(
+      css={classNames(
         getClassName('PanelHeaderButton', platform),
         className,
         {

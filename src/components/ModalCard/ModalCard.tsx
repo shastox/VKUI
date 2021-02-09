@@ -76,20 +76,20 @@ const ModalCard: FC<ModalCardProps> = (props) => {
   return (
     <div
       {...restProps}
-      className={classNames(getClassName('ModalCard', platform), {
+      css={classNames(getClassName('ModalCard', platform), {
         'ModalCard--desktop': isDesktop,
       }, className)}
     >
-      <div className="ModalCard__in">
-        <div className="ModalCard__container">
-          {hasReactNode(icon) && <div className="ModalCard__icon">{icon}</div>}
-          {hasReactNode(header) && <Title level="2" weight="semibold" className="ModalCard__header">{header}</Title>}
-          {hasReactNode(subheader) && <Subhead weight="regular" className="ModalCard__subheader">{subheader}</Subhead>}
+      <div css="ModalCard__in">
+        <div css="ModalCard__container">
+          {hasReactNode(icon) && <div css="ModalCard__icon">{icon}</div>}
+          {hasReactNode(header) && <Title level="2" weight="semibold" css="ModalCard__header">{header}</Title>}
+          {hasReactNode(subheader) && <Subhead weight="regular" css="ModalCard__subheader">{subheader}</Subhead>}
 
           {children}
 
           {hasReactNode(actions) &&
-          <div className={classNames('ModalCard__actions', {
+          <div css={classNames('ModalCard__actions', {
             'ModalCard__actions--v': actionsLayout === 'vertical',
           })}>
             {actions}
@@ -98,7 +98,7 @@ const ModalCard: FC<ModalCardProps> = (props) => {
 
           {canShowCloseBtn && <ModalDismissButton onClick={onClose || modalContext.onClose} />}
           {canShowCloseBtnIos &&
-          <PanelHeaderButton className="ModalCard__dismiss" onClick={onClose || modalContext.onClose}>
+          <PanelHeaderButton css="ModalCard__dismiss" onClick={onClose || modalContext.onClose}>
             <Icon24Dismiss />
           </PanelHeaderButton>
           }

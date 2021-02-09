@@ -23,13 +23,13 @@ const Chip: FC<ChipProps> = (props: ChipProps) => {
   const title = getTitleFromChildren(children);
 
   return (
-    <div className={classNames('Chip', className)} {...restProps}>
-      <div className="Chip__in">
-        {hasReactNode(before) && <div className="Chip__before">{before}</div>}
-        <Caption level="1" weight="regular" className="Chip__content" title={title}>{children}</Caption>
-        {hasReactNode(after) && <div className="Chip__after">{after}</div>}
+    <div css={classNames('Chip', className)} {...restProps}>
+      <div css="Chip__in">
+        {hasReactNode(before) && <div css="Chip__before">{before}</div>}
+        <Caption level="1" weight="regular" css="Chip__content" title={title}>{children}</Caption>
+        {hasReactNode(after) && <div css="Chip__after">{after}</div>}
         {removable &&
-          <div className="Chip__remove" onClick={onRemoveWrapper}>
+          <div css="Chip__remove" onClick={onRemoveWrapper}>
             <Icon16Cancel fill="var(--icon_secondary)" />
           </div>
         }

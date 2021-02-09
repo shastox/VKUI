@@ -91,17 +91,17 @@ export class PanelHeaderContext extends Component<PanelHeaderContextProps & DOMP
     const baseClassNames = getClassName('PanelHeaderContext', platform);
 
     return (
-      <FixedLayout {...restProps} className={classNames(baseClassNames, {
+      <FixedLayout {...restProps} css={classNames(baseClassNames, {
         'PanelHeaderContext--opened': opened,
         'PanelHeaderContext--closing': closing,
         'PanelHeaderContext--desktop': this.isDesktop,
       }, className)} vertical="top">
-        <div className="PanelHeaderContext__in" ref={this.elementRef}>
-          <div className="PanelHeaderContext__content">
+        <div css="PanelHeaderContext__in" ref={this.elementRef}>
+          <div css="PanelHeaderContext__content">
             {(opened || closing) && children}
           </div>
         </div>
-        {!this.isDesktop && (opened || closing) && <div onClick={onClose} className="PanelHeaderContext__fade" />}
+        {!this.isDesktop && (opened || closing) && <div onClick={onClose} css="PanelHeaderContext__fade" />}
       </FixedLayout>
     );
   }

@@ -28,7 +28,7 @@ const Tabbar: FunctionComponent<TabbarProps> = (props: TabbarProps) => {
 
   return (
     <div
-      className={classNames(getClassName('Tabbar', platform), className, `Tabbar--l-${getItemsLayout()}`, {
+      css={classNames(getClassName('Tabbar', platform), className, `Tabbar--l-${getItemsLayout()}`, {
         'Tabbar--shadow': shadow,
       })}
       {...restProps}

@@ -5,7 +5,7 @@ const cache: any = {};
 function createScopedElement(el: any, props: any) {
   let args = arguments;
 
-  if (typeof el !== 'string' || !props || !props.className) {
+  if (!props || !props.css) {
     return React.createElement.apply(undefined, args);
   }
 
@@ -13,8 +13,9 @@ function createScopedElement(el: any, props: any) {
   let createElementArgArray = new Array(argsLength);
   createElementArgArray[0] = args[0];
 
-  cache[props.className] = cache[props.className] || props.className.replace(hasTransformable, 'vkui__vkui__');
-  props.className = cache[props.className];
+  cache[props.css] = cache[props.css] || props.css.replace(hasTransformable, 'vkui__vkui__');
+  props.className = cache[props.css] + (props.className || '');
+  props.css = null;
   createElementArgArray[1] = props;
 
   for (let i = 2; i < argsLength; i++) {

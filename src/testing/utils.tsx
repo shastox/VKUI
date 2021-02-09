@@ -33,7 +33,7 @@ export function baselineComponent<Props extends BasicProps>(
   });
   forward && it('forwards attributes', () => {
     const { rerender } = render((
-      <Component data-testid="__cmp__" className="__cls__" style={{ background: 'red' }} />
+      <Component data-testid="__cmp__" css="__cls__" style={{ background: 'red' }} />
     ));
     // forward DOM attributes
     domAttr && expect(screen.queryByTestId('__cmp__')).toBeTruthy();

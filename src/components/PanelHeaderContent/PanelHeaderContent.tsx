@@ -31,24 +31,24 @@ const PanelHeaderContent: FunctionComponent<PanelHeaderContentProps> = ({
   const baseClassNames = getClassName('PanelHeaderContent', platform);
 
   return (
-    <div {...rootProps} className={classNames(baseClassNames, className)} style={style}>
-      {hasReactNode(before) && <div className="PanelHeaderContent__before">{before}</div>}
-      <InComponent {...inProps} className="PanelHeaderContent__in" onClick={onClick}>
+    <div {...rootProps} css={classNames(baseClassNames, className)} style={style}>
+      {hasReactNode(before) && <div css="PanelHeaderContent__before">{before}</div>}
+      <InComponent {...inProps} css="PanelHeaderContent__in" onClick={onClick}>
         {hasReactNode(status) &&
-          <Caption level="1" weight="regular" className="PanelHeaderContent__status">
+          <Caption level="1" weight="regular" css="PanelHeaderContent__status">
             {status}
           </Caption>
         }
-        <div className="PanelHeaderContent__children">
+        <div css="PanelHeaderContent__children">
           {hasReactNode(status) ?
             <Headline Component="span" weight="medium">
               {children}
             </Headline>
-            : <span className="PanelHeaderContent__children-in">{children}</span>
+            : <span css="PanelHeaderContent__children-in">{children}</span>
           }
-          {hasReactNode(aside) && <div className="PanelHeaderContent__aside">{aside}</div>}
+          {hasReactNode(aside) && <div css="PanelHeaderContent__aside">{aside}</div>}
         </div>
-        {hasReactNode(before) && <div className="PanelHeaderContent__width" />}
+        {hasReactNode(before) && <div css="PanelHeaderContent__width" />}
       </InComponent>
     </div>
   );

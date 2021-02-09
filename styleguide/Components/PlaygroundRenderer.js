@@ -36,15 +36,15 @@ class PlaygroundRenderer extends React.Component {
     } = this.props;
 
     return (
-      <div className={classes.root}>
-        <div className={cx(classes.preview, previewProps.className)} {...previewProps} data-preview={name}>
+      <div css={classes.root}>
+        <div css={cx(classes.preview, previewProps.className)} {...previewProps} data-preview={name}>
           { preview }
         </div>
-        <div className={classes.controls}>
-          <div className={classes.tabs}>{tabButtons}</div>
-          <div className={classes.toolbar}>{toolbar}</div>
+        <div css={classes.controls}>
+          <div css={classes.tabs}>{tabButtons}</div>
+          <div css={classes.toolbar}>{toolbar}</div>
         </div>
-        <div className={classes.tab}>{tabBody}</div>
+        <div css={classes.tab}>{tabBody}</div>
       </div>
     );
   }

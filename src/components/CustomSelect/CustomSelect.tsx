@@ -373,7 +373,7 @@ class CustomSelect extends React.Component<CustomSelectProps, CustomSelectState>
 
     return (
       <label
-        className={classNames(getClassName('CustomSelect', platform), className)}
+        css={classNames(getClassName('CustomSelect', platform), className)}
         style={style}
         ref={this.rootRef}
       >
@@ -385,7 +385,7 @@ class CustomSelect extends React.Component<CustomSelectProps, CustomSelectState>
           onKeyUp={this.handleKeyUp}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
-          className={classNames({
+          css={classNames({
             'CustomSelect__open': opened,
             'CustomSelect__open--popupDirectionTop': popupDirection === 'top',
           }, className)}
@@ -399,13 +399,13 @@ class CustomSelect extends React.Component<CustomSelectProps, CustomSelectState>
           onBlur={onBlur}
           onFocus={onFocus}
           value={value}
-          className="CustomSelect__control"
+          css="CustomSelect__control"
         >
           {options.map((item) => <option key={`${item.value}`} value={item.value} />)}
         </select>
         {opened &&
         <div
-          className={classNames('CustomSelect__options', `CustomSelect__options--sizeY-${sizeY}`, {
+          css={classNames('CustomSelect__options', `CustomSelect__options--sizeY-${sizeY}`, {
             'CustomSelect__options--popupDirectionTop': popupDirection === 'top',
           })}
           onMouseLeave={this.resetFocusedOption}

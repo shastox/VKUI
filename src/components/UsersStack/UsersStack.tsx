@@ -51,7 +51,7 @@ const UsersStack: FC<UsersStackProps> = (props) => {
   return (
     <div
       {...restProps}
-      className={
+      css={
         classNames(
           getClassName('UsersStack', platform),
           className,
@@ -64,23 +64,23 @@ const UsersStack: FC<UsersStackProps> = (props) => {
         )
       }
     >
-      <div className="UsersStack__photos">
+      <div css="UsersStack__photos">
         {photosShown.map((photo, i) => (
           <div
             key={i}
-            className="UsersStack__photo"
+            css="UsersStack__photo"
             style={{ backgroundImage: `url(${photo})` }}
           />
         ))}
 
         {canShowOthers &&
-          <Caption weight="medium" level="1" className="UsersStack__photo UsersStack__photo--others">
+          <Caption weight="medium" level="1" css="UsersStack__photo UsersStack__photo--others">
             <span>+{othersCount}</span>
           </Caption>
         }
       </div>
       {children &&
-        <Caption weight="regular" level="1" className="UsersStack__text">
+        <Caption weight="regular" level="1" css="UsersStack__text">
           {children}
         </Caption>
       }

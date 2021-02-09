@@ -397,16 +397,16 @@ class ModalRootDesktopComponent extends Component<ModalRootProps & DOMProps, Mod
     return (
       <ModalRootContext.Provider value={this.modalRootContext}>
         <div
-          className={classNames(getClassName('ModalRoot', this.props.platform), {
+          css={classNames(getClassName('ModalRoot', this.props.platform), {
             'ModalRoot--vkapps': this.props.configProvider.webviewType === WebviewType.VKAPPS,
           })}
         >
           <div
-            className="ModalRoot__mask"
+            css="ModalRoot__mask"
             onClick={this.triggerActiveModalClose}
             ref={this.maskElementRef}
           />
-          <div className="ModalRoot__viewport">
+          <div css="ModalRoot__viewport">
             {this.modals.map((Modal: ReactElement) => {
               const modalId = Modal.props.id;
               if (!visibleModals.includes(Modal.props.id)) {
@@ -419,7 +419,7 @@ class ModalRootDesktopComponent extends Component<ModalRootProps & DOMProps, Mod
                 <div
                   key={key}
                   id={key}
-                  className={classNames('ModalRoot__modal', {
+                  css={classNames('ModalRoot__modal', {
                     'ModalRoot__modal--active': modalId === activeModal,
                     'ModalRoot__modal--prev': modalId === prevModal,
                     'ModalRoot__modal--next': modalId === nextModal,

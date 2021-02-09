@@ -43,14 +43,14 @@ const Counter: FC<CounterProps> = (props: CounterProps) => {
   return (
     <div
       {...restProps}
-      className={classNames(className,
+      css={classNames(className,
         getClassName('Counter', platform),
         `Counter--${mode}`,
         `Counter--s-${size}`,
         className,
       )}
     >
-      {hasReactNode(children) && <CounterTypography size={size} className="Counter__in">{children}</CounterTypography>}
+      {hasReactNode(children) && <CounterTypography size={size} css="Counter__in">{children}</CounterTypography>}
     </div>
   );
 };

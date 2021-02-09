@@ -29,13 +29,13 @@ export const SplitLayout: FC<SplitLayoutProps> = ({
 
   return (
     <PopoutRoot
-      className={getClassName('SplitLayout', platform)}
+      css={getClassName('SplitLayout', platform)}
       popout={popout}
       modal={modal}
       getRootRef={getRootRef}
     >
       {header}
-      <div {...restProps} ref={getRef} className={classNames('SplitLayout__inner', className, {
+      <div {...restProps} ref={getRef} css={classNames('SplitLayout__inner', className, {
         'SplitLayout__inner--header': !!header,
       })}>
         {children}

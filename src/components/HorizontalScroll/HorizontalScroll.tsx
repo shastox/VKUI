@@ -165,7 +165,7 @@ const HorizontalScroll: FC<HorizontalScrollProps> = (props) => {
   useEffect(onscroll, [scrollerRef, children]);
 
   return (
-    <div {...restProps} className={classNames(className, getClassName('HorizontalScroll', platform))}>
+    <div {...restProps} css={classNames(className, getClassName('HorizontalScroll', platform))}>
       {showArrows && hasMouse && canScrollLeft &&
       <HorizontalScrollArrow
         direction="left"
@@ -178,8 +178,8 @@ const HorizontalScroll: FC<HorizontalScrollProps> = (props) => {
         onClick={() => scrollTo(getScrollToRight)}
       />
       }
-      <div className="HorizontalScroll__in" ref={scrollerRef}>
-        <div className="HorizontalScroll__in-wrapper">
+      <div css="HorizontalScroll__in" ref={scrollerRef}>
+        <div css="HorizontalScroll__in-wrapper">
           {children}
         </div>
       </div>

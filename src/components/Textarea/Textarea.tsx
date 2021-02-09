@@ -122,13 +122,13 @@ class Textarea extends PureComponent<TextareaProps, TextareaState> {
 
     return (
       <FormField
-        className={classNames(getClassName('Textarea', platform), className, `Textarea--sizeY-${sizeY}`)}
+        css={classNames(getClassName('Textarea', platform), className, `Textarea--sizeY-${sizeY}`)}
         style={style}
         getRootRef={getRootRef}
       >
         <textarea
           {...restProps}
-          className="Textarea__el"
+          css="Textarea__el"
           value={this.value}
           onChange={this.onChange}
           ref={this.getRef}

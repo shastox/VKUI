@@ -63,7 +63,7 @@ const ActionSheetItem: React.FunctionComponent<ActionSheetItemProps> = ({
     <Tappable
       {...restProps}
       onClick={onItemClick(onClick, autoclose)}
-      className={
+      css={
         classNames(
           getClassName('ActionSheetItem', platform),
           `ActionSheetItem--${mode}`,
@@ -78,21 +78,21 @@ const ActionSheetItem: React.FunctionComponent<ActionSheetItemProps> = ({
       }
       Component={Component}
     >
-      {hasReactNode(before) && <div className="ActionSheetItem__before">{before}</div>}
-      <div className="ActionSheetItem__container">
-        <div className="ActionSheetItem__content">
+      {hasReactNode(before) && <div css="ActionSheetItem__before">{before}</div>}
+      <div css="ActionSheetItem__container">
+        <div css="ActionSheetItem__content">
           {sizeY === SizeType.COMPACT ?
             <>
               <Text
                 weight={mode === 'cancel' ? 'medium' : 'regular'}
-                className="ActionSheetItem__children"
+                css="ActionSheetItem__children"
               >
                 {children}
               </Text>
               {hasReactNode(meta) &&
                 <Text
                   weight="regular"
-                  className="ActionSheetItem__meta"
+                  css="ActionSheetItem__meta"
                 >
                   {meta}
                 </Text>
@@ -103,7 +103,7 @@ const ActionSheetItem: React.FunctionComponent<ActionSheetItemProps> = ({
               <Title
                 weight={mode === 'cancel' ? 'medium' : 'regular'}
                 level={isCompact || hasReactNode(before) || platform === ANDROID ? '3' : '2'}
-                className="ActionSheetItem__children"
+                css="ActionSheetItem__children"
               >
                 {children}
               </Title>
@@ -111,7 +111,7 @@ const ActionSheetItem: React.FunctionComponent<ActionSheetItemProps> = ({
                 <Title
                   weight="regular"
                   level={isCompact || hasReactNode(before) || platform === ANDROID ? '3' : '2'}
-                  className="ActionSheetItem__meta"
+                  css="ActionSheetItem__meta"
                 >
                   {meta}
                 </Title>
@@ -120,16 +120,16 @@ const ActionSheetItem: React.FunctionComponent<ActionSheetItemProps> = ({
           }
         </div>
         {hasReactNode(subtitle) && (sizeY === SizeType.COMPACT ?
-          <Caption weight="regular" className="ActionSheetItem__subtitle" level="1">{subtitle}</Caption>
+          <Caption weight="regular" css="ActionSheetItem__subtitle" level="1">{subtitle}</Caption>
           :
-          <Subhead weight="regular" className="ActionSheetItem__subtitle">{subtitle}</Subhead>
+          <Subhead weight="regular" css="ActionSheetItem__subtitle">{subtitle}</Subhead>
         )}
       </div>
       {selectable &&
-        <div className="ActionSheetItem__after">
+        <div css="ActionSheetItem__after">
           <input
             type="radio"
-            className="ActionSheetItem__radio"
+            css="ActionSheetItem__radio"
             name={name}
             value={value}
             onChange={onChange}
@@ -137,7 +137,7 @@ const ActionSheetItem: React.FunctionComponent<ActionSheetItemProps> = ({
             checked={checked}
             disabled={restProps.disabled}
           />
-          <div className="ActionSheetItem__marker">
+          <div css="ActionSheetItem__marker">
             {platform === VKCOM ? <Icon24Done /> : <Icon16Done />}
           </div>
         </div>

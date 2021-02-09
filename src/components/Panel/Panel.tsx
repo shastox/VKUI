@@ -45,16 +45,16 @@ class Panel extends Component<PanelProps> {
         <div
           {...restProps}
           ref={this.getRef}
-          className={classNames(getClassName('Panel', platform), className, `Panel--${sizeX}`, {
+          css={classNames(getClassName('Panel', platform), className, `Panel--${sizeX}`, {
             'Panel--centered': centered,
             [`Panel--sizeX-${sizeX}`]: true,
           })}
         >
-          <Touch className="Panel__in">
-            {platform === IOS && <div className="Panel__fade" />}
-            <div className="Panel__in-before" />
-            {centered ? <div className="Panel__centered">{children}</div> : children}
-            <div className="Panel__in-after" />
+          <Touch css="Panel__in">
+            {platform === IOS && <div css="Panel__fade" />}
+            <div css="Panel__in-before" />
+            {centered ? <div css="Panel__centered">{children}</div> : children}
+            <div css="Panel__in-after" />
           </Touch>
         </div>
       </PanelContext.Provider>

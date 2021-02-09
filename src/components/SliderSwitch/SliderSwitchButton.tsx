@@ -22,7 +22,7 @@ const SliderSwitchButton: FunctionComponent<ButtonProps> = (props: ButtonProps) 
   };
 
   return <Tappable {...restProps}
-    className={
+    css={
       classNames(
         getClassName('SliderSwitch__button', platform),
         className,

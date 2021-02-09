@@ -73,18 +73,18 @@ export interface BannerProps extends HTMLAttributes<HTMLDivElement> {
 function renderHeader({ size, header }: Pick<BannerProps, 'size' | 'header'>) {
   switch (size) {
     case 's':
-      return <Headline weight="medium" className="Banner__header">{header}</Headline>;
+      return <Headline weight="medium" css="Banner__header">{header}</Headline>;
     case 'm':
-      return <Title level="2" weight="medium" className="Banner__header">{header}</Title>;
+      return <Title level="2" weight="medium" css="Banner__header">{header}</Title>;
   }
 }
 
 function renderSubheader({ size, subheader }: Pick<BannerProps, 'size' | 'subheader'>) {
   switch (size) {
     case 's':
-      return <Caption level="1" weight="regular" className="Banner__subheader">{subheader}</Caption>;
+      return <Caption level="1" weight="regular" css="Banner__subheader">{subheader}</Caption>;
     case 'm':
-      return <Text weight="regular" className="Banner__subheader">{subheader}</Text>;
+      return <Text weight="regular" css="Banner__subheader">{subheader}</Text>;
   }
 }
 
@@ -101,7 +101,7 @@ const Banner: FunctionComponent<BannerProps> = (props: BannerProps) => {
   return (
     <div
       {...restProps}
-      className={classNames(
+      css={classNames(
         getClassName('Banner', platform),
         `Banner--md-${mode}`,
         `Banner--sz-${size}`, {
@@ -109,33 +109,33 @@ const Banner: FunctionComponent<BannerProps> = (props: BannerProps) => {
         }, className,
       )}
     >
-      <InnerComponent className="Banner__in">
+      <InnerComponent css="Banner__in">
         {mode === 'image' && background &&
-        <div className="Banner__bg">
+        <div css="Banner__bg">
           {background}
         </div>
         }
 
-        {before && <div className="Banner__before">{before}</div>}
+        {before && <div css="Banner__before">{before}</div>}
 
-        <div className="Banner__content">
+        <div css="Banner__content">
           {hasReactNode(header) && renderHeader({ size, header })}
           {hasReactNode(subheader) && renderSubheader({ size, subheader })}
-          {hasReactNode(text) && <Text weight="regular" className="Banner__text">{text}</Text>}
+          {hasReactNode(text) && <Text weight="regular" css="Banner__text">{text}</Text>}
           {actions &&
-          <div className="Banner__actions">{actions}</div>
+          <div css="Banner__actions">{actions}</div>
           }
         </div>
 
         {asideMode === 'expand' &&
-        <div className="Banner__expand">
+        <div css="Banner__expand">
           <Icon24Chevron />
         </div>
         }
 
         {asideMode === 'dismiss' &&
-        <div className="Banner__dismiss">
-          <div className="Banner__dismissIcon" onClick={onDismiss}>
+        <div css="Banner__dismiss">
+          <div css="Banner__dismissIcon" onClick={onDismiss}>
             {(platform === ANDROID || platform === VKCOM) && <Icon24Cancel />}
             {platform === IOS && (mode === 'image' ? <Icon24DismissDark /> : <Icon24DismissSubstract />)}
           </div>

@@ -30,20 +30,20 @@ const TabbarItem: FunctionComponent<TabbarItemProps> = (props: TabbarItemProps) 
   return (
     <Component
       {...restProps}
-      className={classNames(getClassName('TabbarItem', platform), className, {
+      css={classNames(getClassName('TabbarItem', platform), className, {
         'TabbarItem--selected': selected,
         'TabbarItem--text': !!text,
       })}
     >
-      <div className="TabbarItem__in">
-        <div className="TabbarItem__icon">
+      <div css="TabbarItem__in">
+        <div css="TabbarItem__icon">
           {children}
-          <div className="TabbarItem__label">
+          <div css="TabbarItem__label">
             {hasReactNode(indicator) && indicator}
             {!indicator && label && <Counter size="s" mode="prominent">{label}</Counter>}
           </div>
         </div>
-        {text && <div className="TabbarItem__text">{text}</div>}
+        {text && <div css="TabbarItem__text">{text}</div>}
       </div>
     </Component>
   );

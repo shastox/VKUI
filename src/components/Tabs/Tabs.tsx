@@ -31,9 +31,9 @@ const Tabs: FunctionComponent<TabsProps> = ({
     <div
       {...restProps}
       ref={getRootRef}
-      className={classNames(getClassName('Tabs', platform), `Tabs--${mode}`, `Tabs--sizeX-${sizeX}`, className)}
+      css={classNames(getClassName('Tabs', platform), `Tabs--${mode}`, `Tabs--sizeX-${sizeX}`, className)}
     >
-      <div className="Tabs__in">
+      <div css="Tabs__in">
         <TabsModeContext.Provider value={mode}>
           {children}
         </TabsModeContext.Provider>

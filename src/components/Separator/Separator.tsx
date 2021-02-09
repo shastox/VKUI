@@ -18,11 +18,11 @@ let Separator: FunctionComponent<SeparatorProps> = ({ className, wide, expanded,
   return (
     <div
       {...restProps}
-      className={classNames(getClassName('Separator', platform), className, {
+      css={classNames(getClassName('Separator', platform), className, {
         'Separator--wide': wide,
       })}
     >
-      <div className={classNames('Separator__in', {
+      <div css={classNames('Separator__in', {
         'Separator__in--expanded': expanded,
       })} />
     </div>

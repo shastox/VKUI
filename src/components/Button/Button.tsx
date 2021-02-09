@@ -27,20 +27,20 @@ const getContent = (size: ButtonProps['size'], children: ButtonProps['children']
     case 'l':
       return (
         sizeY === SizeType.COMPACT ?
-          <Text weight="medium" className="Button__content">{children}</Text>
+          <Text weight="medium" css="Button__content">{children}</Text>
           :
-          <Title level="3" weight="medium" Component="div" className="Button__content">
+          <Title level="3" weight="medium" Component="div" css="Button__content">
             {children}
           </Title>
       );
     case 'm':
       return (
         sizeY === SizeType.COMPACT ?
-          <Subhead weight={platform === VKCOM ? 'regular' : 'medium'} className="Button__content" Component="div">
+          <Subhead weight={platform === VKCOM ? 'regular' : 'medium'} css="Button__content" Component="div">
             {children}
           </Subhead>
           :
-          <Text weight="medium" className="Button__content">
+          <Text weight="medium" css="Button__content">
             {children}
           </Text>
       );
@@ -52,7 +52,7 @@ const getContent = (size: ButtonProps['size'], children: ButtonProps['children']
             caps={platform !== Platform.VKCOM}
             level={platform === Platform.VKCOM ? '1' : sizeY === SizeType.COMPACT ? '3' : '2'}
             weight={platform === Platform.VKCOM ? 'regular' : 'medium'}
-            className={classNames('Button__content', { 'Button__content--caps': platform !== Platform.VKCOM })}
+            css={classNames('Button__content', { 'Button__content--caps': platform !== Platform.VKCOM })}
           >
             {children}
           </Caption>
@@ -64,7 +64,7 @@ const getContent = (size: ButtonProps['size'], children: ButtonProps['children']
           <Caption
             weight={platform === VKCOM ? 'regular' : 'medium'}
             level="1"
-            className="Button__content"
+            css="Button__content"
           >
             {children}
           </Caption>
@@ -72,7 +72,7 @@ const getContent = (size: ButtonProps['size'], children: ButtonProps['children']
           <Subhead
             weight="medium"
             Component="div"
-            className="Button__content"
+            css="Button__content"
           >
             {children}
           </Subhead>
@@ -86,7 +86,7 @@ const Button: FunctionComponent<ButtonProps> = (props: ButtonProps) => {
   const hasIcons = Boolean(before || after);
 
   return <Tappable {...restProps}
-    className={
+    css={
       classNames(
         getClassName('Button', platform),
         className,
@@ -103,10 +103,10 @@ const Button: FunctionComponent<ButtonProps> = (props: ButtonProps) => {
     getRootRef={getRootRef}
     Component={restProps.href ? 'a' : Component}
   >
-    <div className="Button__in">
-      {before && <div className="Button__before">{before}</div>}
+    <div css="Button__in">
+      {before && <div css="Button__before">{before}</div>}
       {children && getContent(size, children, hasIcons, sizeY, platform)}
-      {after && <div className="Button__after">{after}</div>}
+      {after && <div css="Button__after">{after}</div>}
     </div>
   </Tappable>;
 };

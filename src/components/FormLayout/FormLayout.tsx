@@ -30,15 +30,15 @@ const FormLayout: FunctionComponent<FormLayoutProps> = (props: FormLayoutProps) 
   return (
     <Component
       {...restProps}
-      className={classNames(getClassName('FormLayout', platform), className)}
+      css={classNames(getClassName('FormLayout', platform), className)}
       onSubmit={onSubmit}
       ref={getRef}
     >
-      <div className="FormLayout__container">
+      <div css="FormLayout__container">
         {children}
       </div>
       {Component === 'form' &&
-        <input type="submit" className="FormLayout__submit" value="" />
+        <input type="submit" css="FormLayout__submit" value="" />
       }
     </Component>
   );

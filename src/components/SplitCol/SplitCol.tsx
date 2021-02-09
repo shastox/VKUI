@@ -54,13 +54,13 @@ export class SplitCol extends Component<SplitColProps> {
           minWidth: minWidth,
         }}
         ref={this.baseRef}
-        className={classNames(className, 'SplitCol', {
+        css={classNames(className, 'SplitCol', {
           'SplitCol--spaced': spaced,
           'SplitCol--fixed': fixed,
         })}
       >
         <SplitColContext.Provider value={this.getContext()}>
-          {fixed ? <div className="SplitCol__fixedInner">{children}</div> : children}
+          {fixed ? <div css="SplitCol__fixedInner">{children}</div> : children}
         </SplitColContext.Provider>
       </div>
     );

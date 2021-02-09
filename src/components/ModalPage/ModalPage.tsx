@@ -54,19 +54,19 @@ const ModalPage: FC<ModalPageProps> = (props) => {
   return (
     <div
       {...restProps}
-      className={classNames(getClassName('ModalPage', platform), className, `ModalPage--sizeX-${sizeX}`, {
+      css={classNames(getClassName('ModalPage', platform), className, `ModalPage--sizeX-${sizeX}`, {
         'ModalPage--desktop': isDesktop,
       })}
     >
-      <div className="ModalPage__in-wrap">
-        <div className="ModalPage__in">
-          <div className="ModalPage__header">
+      <div css="ModalPage__in-wrap">
+        <div css="ModalPage__in">
+          <div css="ModalPage__header">
             {header}
           </div>
 
-          <div className="ModalPage__content-wrap">
-            <div className="ModalPage__content">
-              <div className="ModalPage__content-in">
+          <div css="ModalPage__content-wrap">
+            <div css="ModalPage__content">
+              <div css="ModalPage__content-in">
                 {children}
               </div>
             </div>

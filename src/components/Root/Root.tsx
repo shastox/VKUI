@@ -183,13 +183,13 @@ class Root extends Component<RootProps & DOMProps, RootState> {
     const disableAnimation = this.shouldDisableTransitionMotion();
 
     return (
-      <div {...restProps} className={classNames(baseClassName, this.props.className, {
+      <div {...restProps} css={classNames(baseClassName, this.props.className, {
         'Root--transition': !disableAnimation && transition,
         'Root--no-motion': disableAnimation,
       })}>
         {Views.map((view: ReactElement) => {
           return (
-            <div key={view.props.id} id={`view-${view.props.id}`} className={classNames('Root__view', {
+            <div key={view.props.id} id={`view-${view.props.id}`} css={classNames('Root__view', {
               'Root__view--hide-back': view.props.id === prevView && isBack,
               'Root__view--hide-forward': view.props.id === prevView && !isBack,
               'Root__view--show-back': view.props.id === nextView && isBack,
@@ -201,8 +201,8 @@ class Root extends Component<RootProps & DOMProps, RootState> {
           );
         })}
         <AppRootPortal>
-          {!!popout && <div className="Root__popout">{popout}</div>}
-          {!!modal && <div className="Root__modal">{modal}</div>}
+          {!!popout && <div css="Root__popout">{popout}</div>}
+          {!!modal && <div css="Root__modal">{modal}</div>}
         </AppRootPortal>
       </div>
     );

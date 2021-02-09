@@ -16,9 +16,9 @@ const Card: FunctionComponent<CardProps> = ({ mode, children, className, getRoot
     <div
       {...restProps}
       ref={getRootRef}
-      className={classNames(className, getClassname('Card', platform), `Card--md-${mode}`)}
+      css={classNames(className, getClassname('Card', platform), `Card--md-${mode}`)}
     >
-      <div className="Card__in">
+      <div css="Card__in">
         {children}
       </div>
     </div>

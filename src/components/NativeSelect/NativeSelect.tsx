@@ -93,7 +93,7 @@ class NativeSelect extends React.Component<NativeSelectProps, SelectState> {
     return (
       <FormField
         Component="label"
-        className={classNames(getClassName('Select', platform), {
+        css={classNames(getClassName('Select', platform), {
           ['Select--not-selected']: this.state.notSelected,
           [`Select--align-${align}`]: !!align,
           [`Select--sizeX--${sizeX}`]: !!sizeX,
@@ -106,7 +106,7 @@ class NativeSelect extends React.Component<NativeSelectProps, SelectState> {
         <select
           {...restProps}
           disabled={disabled}
-          className="Select__el"
+          css="Select__el"
           onChange={this.onChange}
           value={this.value}
           ref={this.getRef}
@@ -114,8 +114,8 @@ class NativeSelect extends React.Component<NativeSelectProps, SelectState> {
           {placeholder && <option value="">{placeholder}</option>}
           {children}
         </select>
-        <TypographyComponent weight="regular" className="Select__container">
-          <div className="Select__title">{this.state.title}</div>
+        <TypographyComponent weight="regular" css="Select__container">
+          <div css="Select__title">{this.state.title}</div>
           {sizeY === SizeType.COMPACT ? <Icon20Dropdown /> : <Icon24Dropdown />}
         </TypographyComponent>
       </FormField>

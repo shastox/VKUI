@@ -82,7 +82,7 @@ class ActionSheetDropdownDesktop extends Component<Props & DOMProps> {
         ref={elementRef}
         onClick={this.stopPropagation}
         style={this.state.dropdownStyles}
-        className={classNames(baseClaseName, 'ActionSheet--desktop', {
+        css={classNames(baseClaseName, 'ActionSheet--desktop', {
           'ActionSheet--closing': this.props.closing,
         }, `ActionSheet--sizeY-${sizeY}`)}
       >

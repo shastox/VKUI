@@ -31,7 +31,7 @@ class ActionSheetDropdown extends Component<Props> {
         {...restProps}
         ref={elementRef}
         onClick={this.stopPropagation}
-        className={classNames(baseClaseName, {
+        css={classNames(baseClaseName, {
           'ActionSheet--closing': this.props.closing,
         })}
       >

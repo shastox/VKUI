@@ -58,7 +58,7 @@ const CardScroll: FC<CardScrollProps> = ({ children, className, size, sizeX, ...
   return (
     <div
       {...restProps}
-      className={classNames(
+      css={classNames(
         className,
         getClassname('CardScroll', platform),
         `CardScroll--${size}`,
@@ -66,10 +66,10 @@ const CardScroll: FC<CardScrollProps> = ({ children, className, size, sizeX, ...
       )}
     >
       <HorizontalScroll getScrollToLeft={getScrollToLeft} getScrollToRight={getScrollToRight} showArrows={true}>
-        <div className="CardScroll__in" ref={refContainer}>
-          <span className="CardScroll__gap" ref={gapRef} />
+        <div css="CardScroll__in" ref={refContainer}>
+          <span css="CardScroll__gap" ref={gapRef} />
           {children}
-          <span className="CardScroll__gap" />
+          <span css="CardScroll__gap" />
         </div>
       </HorizontalScroll>
     </div>

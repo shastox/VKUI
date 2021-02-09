@@ -766,7 +766,7 @@ class ModalRootTouchComponent extends Component<ModalRootProps & DOMProps, Modal
       <TouchRootContext.Provider value={true}>
         <ModalRootContext.Provider value={this.modalRootContext}>
           <Touch
-            className={classNames(getClassName('ModalRoot', this.props.platform), {
+            css={classNames(getClassName('ModalRoot', this.props.platform), {
               'ModalRoot--vkapps': this.props.configProvider.webviewType === WebviewType.VKAPPS,
               'ModalRoot--touched': touchDown,
               'ModalRoot--switching': switching,
@@ -776,11 +776,11 @@ class ModalRootTouchComponent extends Component<ModalRootProps & DOMProps, Modal
             onScroll={this.onScroll}
           >
             <div
-              className="ModalRoot__mask"
+              css="ModalRoot__mask"
               onClick={this.triggerActiveModalClose}
               ref={this.maskElementRef}
             />
-            <div className="ModalRoot__viewport">
+            <div css="ModalRoot__viewport">
               {this.getModals().map((Modal) => {
                 const modalId = Modal.props.id;
                 if (!visibleModals.includes(Modal.props.id)) {
@@ -795,7 +795,7 @@ class ModalRootTouchComponent extends Component<ModalRootProps & DOMProps, Modal
                   <div
                     key={key}
                     id={key}
-                    className={classNames('ModalRoot__modal', {
+                    css={classNames('ModalRoot__modal', {
                       'ModalRoot__modal--active': modalId === activeModal,
                       'ModalRoot__modal--prev': modalId === prevModal,
                       'ModalRoot__modal--next': modalId === nextModal,

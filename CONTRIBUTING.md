@@ -22,7 +22,7 @@
 const { mode, style, className, ...restProps } = props;
 
 return (
-  <div className={classNames('Input', `Input--${mode}`, className)} style={style}>
+  <div css={classNames('Input', `Input--${mode}`, className)} style={style}>
     <input {...restProps} />
   </div>
 );

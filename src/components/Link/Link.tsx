@@ -29,7 +29,7 @@ const Link: FunctionComponent<LinkProps> = ({
     <Tappable
       Component={Component}
       {...restProps}
-      className={classNames(baseClassName, className)}
+      css={classNames(baseClassName, className)}
     >{children}</Tappable>
   );
 };

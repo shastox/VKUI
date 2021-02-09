@@ -29,7 +29,7 @@ const Subhead: FunctionComponent<SubheadProps> = ({
   return (
     <SubheadComponent
       {...restProps}
-      className={classNames(getClassName('Subhead', platform), `Subhead--w-${subheadWeight}`, className)}
+      css={classNames(getClassName('Subhead', platform), `Subhead--w-${subheadWeight}`, className)}
     >
       {children}
     </SubheadComponent>
