@@ -128,6 +128,7 @@
   "scripts": {
     "prepare": "yarn build",
     "size": "yarn clear && yarn build && size-limit",
+    "size:ci": "yarn install --frozen-lockfile --ignore-scripts && yarn build",
     "styleguide": "cross-env NODE_ENV=development styleguidist server --config=styleguide/config.js",
     "styleguide:build": "cross-env NODE_ENV=production styleguidist build --config=styleguide/config.js",
     "dev": "yarn clear && yarn copy-default-scheme && concurrently \"yarn:tsc-dev\" \"yarn:babel-dev\" \"yarn:postcss-dev\" \"yarn:postcss-unstable-dev\"",
