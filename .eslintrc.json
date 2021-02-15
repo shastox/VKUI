@@ -27,6 +27,19 @@
     }],
     "no-restricted-imports": ["error", {
       "patterns": ["@vkontakte/icons/dist/*"]
+    }],
+    "no-restricted-properties": ["error", {
+      "property": "querySelector"
+    }, {
+      "property": "querySelectorAll"
+    }, {
+      "property": "getElementById"
+    }, {
+      "property": "getElementsByClassName"
+    }, {
+      "property": "closest"
+    }, {
+      "property": "classList"
     }]
   },
   "overrides": [
